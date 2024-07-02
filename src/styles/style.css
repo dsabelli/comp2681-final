@@ -1,0 +1,48 @@
+/*************************************************************************************************************************
+// style.css
+//
+// Daniel Sabelli T00743378
+// Jun. 16, 2024
+// COMP 2681 Assignment 3
+// This stylesheet contains all custom CSS styles. 
+// Since I'm also using Tailwind, these styles are ported 
+// to the output.css file along with the Tailwind specific class names and styles.
+// The output.css file is used as the stylesheet for all pages since it contains 
+// both my custom styles, and Tailwind styles.  
+//*************************************************************************************************************************
+
+
+/* Import Tailwind CSS framework */
+@tailwind base; /* Base styles for typography, colors, etc. */
+@tailwind components; /* Component classes like buttons, forms, etc. */
+@tailwind utilities; /* Utility-first classes for styling elements */
+
+/* Standardize line height, tab-size, font family across different browsers */
+html,
+:host {
+  /* Apply styles globally */
+  line-height: 1.5; /* Sets the line height for better readability */
+  -webkit-text-size-adjust: 100%; /* Ensures text size adjusts properly on iOS devices */
+  -moz-tab-size: 4; /* Sets the default tab size for Firefox */
+  -o-tab-size: 4; /* Sets the default tab size for Opera */
+  tab-size: 4; /* Sets the default tab size for other browsers */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    /* Defines fallback fonts */ "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji"; /* Provides support for emoji fonts */
+  font-feature-settings: normal; /* Disables font features like ligatures */
+  font-variation-settings: normal; /* Disables font variations */
+  -webkit-tap-highlight-color: transparent; /* Removes tap highlight color on iOS */
+}
+
+/* Define custom color variables */
+:root {
+  /* Root scope for defining global variables */
+  --main-color: #708090; /* Main theme colour */
+  --secondary-color: #f5f5f5; /* Secondary theme colour */
+  --accent-color: #fcb900; /* Accent colour */
+  --text-color: #bccceb; /* Text colour */
+  --success-color: #22bb33; /* Success colour */
+  --success-color-dark: #1c8a29; /* Success colour */
+  --error-color: #b22222; /* Error colour */
+  --error-color-dark: #a11e1e; /* Error colour */
+}

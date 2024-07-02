@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head section contains meta tags, link to stylesheet, and the title of the webpage -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/output.css" />
+    <script src="../scripts/navbar.js" defer></script>
+    <script src="../scripts/cardLeft.js" defer></script>
+    <script src="../scripts/cardRight.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
+    <title>Country Rock Concrete | About</title>
+  </head>
+  <!-- Body section contains the main content of the webpage -->
+  <body>
+    <!-- Navigation bar with links to different pages -->
+    <app-navbar></app-navbar>
+
+    <!-- Main content area with hero section and personal introduction -->
+    <main class="h-screen">
+      <app-card-left
+        ><span style="height: 50vh" slot="img"
+          ><img src="../../images/2022-03-07.jpg"
+        /></span>
+        <span slot="content">
+          <h2 class="card-title mb-4">Some header</h2>
+          <p>
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+          <p>
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+          <p>
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+        </span>
+      </app-card-left>
+      <app-card-right
+        ><span style="height: 50vh" slot="img"
+          ><img src="../../images/2022-03-07.jpg"
+        /></span>
+        <span slot="content">
+          <h2 class="card-title mb-4">Some header</h2>
+          <p>
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+          <p>
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+          <p>
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+        </span>
+      </app-card-right>
+    </main>
+    <!-- Footer section with social media icons and email link -->
+    <app-footer></app-footer>
+  </body>
+</html>
