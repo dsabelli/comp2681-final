@@ -17,53 +17,50 @@
     <app-navbar></app-navbar>
 
     <!-- Main content area with hero section and personal introduction -->
-    <main class="h-screen">
-      <app-card-left
-        ><span style="height: 50vh" slot="img"
-          ><img src="../../images/2022-03-07.jpg"
-        /></span>
-        <span slot="content">
-          <h2 class="card-title mb-4">Some header</h2>
-          <p>
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <p>
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <p>
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-        </span>
-      </app-card-left>
-      <app-card-right
-        ><span style="height: 50vh" slot="img"
-          ><img src="../../images/2022-03-07.jpg"
-        /></span>
-        <span slot="content">
-          <h2 class="card-title mb-4">Some header</h2>
-          <p>
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <p>
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <p>
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-        </span>
-      </app-card-right>
+    <main class="">
+      <div class="bg-base-300">
+        <app-card-left
+          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
+          <span slot="content">
+            <h2 class="card-title mb-4">Country Rock Concrete</h2>
+            <p>
+              At [Company Name], we're a team of dedicated concrete
+              professionals passionate about building strong foundations,
+              literally. We're a small, local business with a big commitment to
+              quality craftsmanship and exceptional customer service. We service
+              the [City/Area] community and <a href="#">surrounding areas</a>,
+              specializing in [List a few key services].
+            </p>
+          </span>
+        </app-card-left>
+      </div>
+      <div class="bg-base-100">
+        <app-card-right
+          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
+          <span slot="content">
+            <h2 class="card-title mb-4">Our mission</h2>
+            <p>
+              No matter the size or scope of your project, we take pride in
+              delivering a smooth, efficient experience from start to finish.
+              Our team of experienced [Workers' titles, e.g., concrete
+              finishers, project managers] is highly skilled and committed to
+              using the latest techniques and materials.
+            </p>
+            <p class="mt-4">
+              We're passionate about exceeding your expectations and ensuring
+              your concrete project is built to last. We believe in open
+              communication and collaboration, working closely with you
+              throughout the entire process to understand your vision and bring
+              it to life.
+            </p>
+            <p class="mt-4">
+              If you're looking for a reliable, trustworthy concrete contractor,
+              contact [Company Name] today. We're happy to discuss your project
+              and answer any questions you may have.
+            </p>
+          </span>
+        </app-card-right>
+      </div>
     </main>
     <!-- Footer section with social media icons and email link -->
     <app-footer></app-footer>
