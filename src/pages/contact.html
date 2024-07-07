@@ -1,3 +1,8 @@
+<style>
+  ul li {
+    font-size: 1.2rem;
+  }
+</style>
 <!DOCTYPE html>
 <html lang="en">
   <!-- Head section contains meta tags, link to stylesheet, and the title of the webpage -->
@@ -16,7 +21,29 @@
     <!-- Navigation bar with links to different pages -->
 
     <!-- Main content area with hero section and personal introduction -->
-    <main><app-form></app-form></main>
+    <main class="w-full flex flex-col justify-center items-center">
+      <h1 class="text-3xl md:text-5xl mt-8 mb-12">Contact us</h1>
+      <div class="w-full flex flex-col-reverse md:flex-row justify-around">
+        <aside class="w-full p-4 md:w-1/2 flex flex-col items-center">
+          <h2 class="text-3xl w-full max-w-xs mb-4">Areas we serve:</h2>
+          <ul class="w-full max-w-xs">
+            <li>Area</li>
+            <li>Area</li>
+            <li>Area</li>
+            <li>Area</li>
+            <li>Area</li>
+            <li>Area</li>
+            <li>Area</li>
+          </ul>
+        </aside>
+
+        <section
+          class="w-full md:w-1/2 flex flex-col justify-center items-center"
+        >
+          <app-form></app-form>
+        </section>
+      </div>
+    </main>
     <!-- Footer section with social media icons and email link -->
     <app-footer></app-footer>
   </body>
