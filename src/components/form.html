@@ -7,33 +7,29 @@
 
 <form
   class="bg-base-300 flex flex-col w-full px-8 py-8 rounded-xl"
-  name="cOrder"
-  id="cOrder"
+  name="contact-form"
+  id="contact-form"
   method="post"
 >
   <!-- Form fields for user input -->
-  <!-- Province select dropdown -->
-  <label class="required" for="province">Service:</label><br />
+  <!-- service select dropdown -->
+  <label class="required" for="service">Service:</label><br />
   <select
     class="select w-full max-w-xl min-w-64 md:min-w-80"
-    id="province"
-    name="province"
+    id="service"
+    name="service"
     required
   >
     <option value="" selected disabled hidden>Select an option</option>
-    <option value="AB">Alberta</option>
-    <option value="BC">British Columbia</option>
-    <option value="MB">Manitoba</option>
-    <option value="NB">New Brunswick</option>
-    <option value="NL">Newfoundland and Labrador</option>
-    <option value="NS">Nova Scotia</option>
-    <option value="ON">Ontario</option>
-    <option value="PE">Prince Edward Island</option>
-    <option value="QC">Quebec</option>
-    <option value="SK">Saskatchewan</option>
-    <option value="NT">Northwest Territories</option>
-    <option value="NU">Nunavut</option>
-    <option value="YT">Yukon</option>
+    <option value="pad">Concrete pads</option>
+    <option value="driveway">Driveways</option>
+    <option value="walkway">Walkways</option>
+    <option value="patio">Patios</option>
+    <option value="pool">Pool decks</option>
+    <option value="foundation">Foundations</option>
+    <option value="cutting">Concrete cutting</option>
+    <option value="sealing">Concrete sealing</option>
+    <option value="maintenance">Maintenance</option>
     <!-- Other options --></select
   ><br />
   <label class="required" for="firstName">First Name:</label><br />
