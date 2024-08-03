@@ -21,6 +21,10 @@
         const shadowRoot = this.attachShadow({ mode: "open" });
         shadowRoot.adoptedStyleSheets = [styleSheet];
         shadowRoot.appendChild(template.content.cloneNode(true));
+
+        const year = new Date().getFullYear();
+        const yearSpan = shadowRoot.getElementById("year");
+        yearSpan.innerText = year;
       }
     }
     // Define the custom element
