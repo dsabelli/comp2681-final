@@ -8,6 +8,9 @@
     <script src="../scripts/navbar.js" defer></script>
     <script src="../scripts/hero.js" defer></script>
     <script src="../scripts/footer.js" defer></script>
+    <script src="../scripts/cardLeft.js" defer></script>
+    <script src="../scripts/cardRight.js" defer></script>
+    <script src="../scripts/tile.js" defer></script>
     <title>Country Rock Concrete</title>
   </head>
   <!-- Body section contains the main content of the webpage -->
@@ -18,6 +21,122 @@
     <!-- Main content area with hero section and personal introduction -->
     <main>
       <app-hero></app-hero>
+
+      <div class="bg-base-300">
+        <app-card-left
+          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
+          <span slot="content">
+            <h2 class="card-title mb-4">Country Rock Concrete</h2>
+            <p>
+              At [Company Name], we're a team of dedicated concrete
+              professionals passionate about building strong foundations,
+              literally. We're a small, local business with a big commitment to
+              quality craftsmanship and exceptional customer service. We service
+              the [City/Area] community and <a href="#">surrounding areas</a>,
+              specializing in [List a few key services].
+            </p>
+          </span></app-card-left
+        >
+      </div>
+      <div class="bg-base-100">
+        <app-card-right
+          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
+          <span slot="content">
+            <h2 class="card-title mb-4">Country Rock Concrete</h2>
+            <p>
+              At [Company Name], we're a team of dedicated concrete
+              professionals passionate about building strong foundations,
+              literally. We're a small, local business with a big commitment to
+              quality craftsmanship and exceptional customer service. We service
+              the [City/Area] community and <a href="#">surrounding areas</a>,
+              specializing in [List a few key services].
+            </p>
+          </span></app-card-right
+        >
+      </div>
+      <div class="bg-base-300">
+        <app-card-left
+          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
+          <span slot="content">
+            <h2 class="card-title mb-4">Country Rock Concrete</h2>
+            <p>
+              At [Company Name], we're a team of dedicated concrete
+              professionals passionate about building strong foundations,
+              literally. We're a small, local business with a big commitment to
+              quality craftsmanship and exceptional customer service. We service
+              the [City/Area] community and <a href="#">surrounding areas</a>,
+              specializing in [List a few key services].
+            </p>
+          </span></app-card-left
+        >
+      </div>
+      <div class="w-full my-12 flex justify-center bg-base-100">
+        <div id="grid" class="grid gap-8 md:grid-cols-3 md:grid-rows-3">
+          <app-tile
+            ><span slot="heading">Concrete pads</span
+            ><span slot="p"
+              >aslkdjhflaksjdhflksajd sladkjfhlsakdjhf lkasjdhflksjahd</span
+            >
+            <span slot="btn">Learn more</span></app-tile
+          >
+          <app-tile
+            ><span slot="heading">Driveways</span
+            ><span slot="p"
+              >aslkdjhflaksjdhflksajd sladkjfhlsakdjhflkasjdhflksjahd</span
+            >
+            <span slot="btn">Learn more</span></app-tile
+          >
+          <app-tile
+            ><span slot="heading">Walkways</span
+            ><span slot="p"
+              >aslkdjhflaksjdhflksajd sladkjfhlsakdjhflkasjdhflksjahd</span
+            >
+            <span slot="btn">Learn more</span></app-tile
+          >
+          <app-tile
+            ><span slot="heading">Patios</span
+            ><span slot="p"
+              >aslkdjhflaksjdhflksajd sladkjfhlsakdjhflkasjdhflksjahd</span
+            >
+            <span slot="btn">Learn more</span></app-tile
+          >
+          <app-tile
+            ><span slot="heading">Pool decks</span
+            ><span slot="p"
+              >aslkdjhflaksjdhflksajd sladkjfhlsakdjhflkasjdhflksjahd</span
+            >
+            <span slot="btn">Learn more</span></app-tile
+          >
+          <app-tile
+            ><span slot="heading">Foundations</span
+            ><span slot="p"
+              >aslkdjhflaksjdhflksajd sladkjfhlsakdjhflkasjdhflksjahd</span
+            >
+            <span slot="btn">Learn more</span></app-tile
+          >
+          <app-tile
+            ><span slot="heading">Concrete cutting</span
+            ><span slot="p"
+              >aslkdjhflaksjdhflksajd sladkjfhlsakdjhflkasjdhflksjahd</span
+            >
+            <span slot="btn">Learn more</span></app-tile
+          >
+          <app-tile
+            ><span slot="heading">Concrete sealing</span
+            ><span slot="p"
+              >aslkdjhflaksjdhflksajd sladkjfhlsakdjhflkasjdhflksjahd</span
+            >
+            <span slot="btn">Learn more</span></app-tile
+          >
+          <app-tile
+            ><span slot="heading">Maintenance</span
+            ><span slot="p"
+              >aslkdjhflaksjdhflksajd sladkjfhlsakdjhflkasjdhflksjahd</span
+            >
+            <span slot="btn">Learn more</span></app-tile
+          >
+        </div>
+      </div>
     </main>
     <!-- Footer section with social media icons and email link -->
     <app-footer></app-footer>

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/output.css" />
     <script src="../scripts/navbar.js" defer></script>
-    <script src="../scripts/hero.js" defer></script>
+    <script src="../scripts/cardLeft.js" defer></script>
+    <script src="../scripts/cardRight.js" defer></script>
     <script src="../scripts/footer.js" defer></script>
     <title>Country Rock Concrete</title>
   </head>
@@ -16,8 +17,174 @@
     <!-- Navigation bar with links to different pages -->
 
     <!-- Main content area with hero section and personal introduction -->
-    <main></main>
+    <main>
+      <div class="w-full p-8 pb-12 m-auto">
+        <h1 class="h1">Services</h1>
+        <p class="text-lg">
+          Tired of the same old gray concrete? Unleash your creativity with our
+          wide range of concrete colors! From classic earth tones to bold and
+          vibrant hues, we have the perfect shade to match your vision.
+          Transform your driveway, patio, or walkway into a stunning focal point
+          with our durable and long-lasting colored concrete options. Customize
+          your outdoor space today!
+        </p>
+      </div>
+      <div class="bg-base-300">
+        <app-card-left
+          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
+          <span slot="content">
+            <h2 id="1" class="card-title mb-4">Concrete pads</h2>
+            <p>
+              At [Company Name], we're a team of dedicated concrete
+              professionals passionate about building strong foundations,
+              literally. We're a small, local business with a big commitment to
+              quality craftsmanship and exceptional customer service. We service
+              the [City/Area] community and <a href="#">surrounding areas</a>,
+              specializing in [List a few key services].
+            </p>
+          </span>
+        </app-card-left>
+      </div>
+      <div class="bg-base-100">
+        <app-card-right
+          ><span slot="img"><img src="../../images/2022-02-11g.jpg" /></span>
+          <span slot="content">
+            <h2 id="2" class="card-title mb-4">Driveways</h2>
+            <p>
+              No matter the size or scope of your project, we take pride in
+              delivering a smooth, efficient experience from start to finish.
+              Our team of experienced [Workers' titles, e.g., concrete
+              finishers, project managers] is highly skilled and committed to
+              using the latest techniques and materials.
+            </p>
+          </span>
+        </app-card-right>
+      </div>
+      <div class="bg-base-300">
+        <app-card-left
+          ><span slot="img"><img src="../../images/2022-11-26x.jpg" /></span>
+          <span slot="content">
+            <h2 id="3" class="card-title mb-4">Walkways</h2>
+            <p>
+              At [Company Name], we're a team of dedicated concrete
+              professionals passionate about building strong foundations,
+              literally. We're a small, local business with a big commitment to
+              quality craftsmanship and exceptional customer service. We service
+              the [City/Area] community and <a href="#">surrounding areas</a>,
+              specializing in [List a few key services].
+            </p>
+          </span>
+        </app-card-left>
+      </div>
+      <div class="bg-base-100">
+        <app-card-right
+          ><span slot="img"><img src="../../images/2022-08-04s.jpg" /></span>
+          <span slot="content">
+            <h2 id="4" class="card-title mb-4">Patios</h2>
+            <p>
+              No matter the size or scope of your project, we take pride in
+              delivering a smooth, efficient experience from start to finish.
+              Our team of experienced [Workers' titles, e.g., concrete
+              finishers, project managers] is highly skilled and committed to
+              using the latest techniques and materials.
+            </p>
+          </span>
+        </app-card-right>
+      </div>
+      <div class="bg-base-300">
+        <app-card-left
+          ><span slot="img"><img src="../../images/2022-11-26.jpg" /></span>
+          <span slot="content">
+            <h2 id="5" class="card-title mb-4">Pool decks</h2>
+            <p>
+              At [Company Name], we're a team of dedicated concrete
+              professionals passionate about building strong foundations,
+              literally. We're a small, local business with a big commitment to
+              quality craftsmanship and exceptional customer service. We service
+              the [City/Area] community and <a href="#">surrounding areas</a>,
+              specializing in [List a few key services].
+            </p>
+          </span>
+        </app-card-left>
+      </div>
+      <div class="bg-base-100">
+        <app-card-right
+          ><span slot="img"><img src="../../images/2022-11-26_013.jpg" /></span>
+          <span slot="content">
+            <h2 id="6" class="card-title mb-4">Foundations</h2>
+            <p>
+              No matter the size or scope of your project, we take pride in
+              delivering a smooth, efficient experience from start to finish.
+              Our team of experienced [Workers' titles, e.g., concrete
+              finishers, project managers] is highly skilled and committed to
+              using the latest techniques and materials.
+            </p>
+          </span>
+        </app-card-right>
+      </div>
+      <div class="bg-base-300">
+        <app-card-left
+          ><span slot="img"><img src="../../images/2022-11-26b.jpg" /></span>
+          <span slot="content">
+            <h2 id="7" class="card-title mb-4">Concrete cutting</h2>
+            <p>
+              At [Company Name], we're a team of dedicated concrete
+              professionals passionate about building strong foundations,
+              literally. We're a small, local business with a big commitment to
+              quality craftsmanship and exceptional customer service. We service
+              the [City/Area] community and <a href="#">surrounding areas</a>,
+              specializing in [List a few key services].
+            </p>
+          </span>
+        </app-card-left>
+      </div>
+      <div class="bg-base-100">
+        <app-card-right
+          ><span slot="img"><img src="../../images/2022-11-26f.jpg" /></span>
+          <span slot="content">
+            <h2 id="8" class="card-title mb-4">Concrete sealing</h2>
+            <p>
+              No matter the size or scope of your project, we take pride in
+              delivering a smooth, efficient experience from start to finish.
+              Our team of experienced [Workers' titles, e.g., concrete
+              finishers, project managers] is highly skilled and committed to
+              using the latest techniques and materials.
+            </p>
+          </span>
+        </app-card-right>
+      </div>
+      <div class="bg-base-300">
+        <app-card-left
+          ><span slot="img"><img src="../../images/2022-11-26s.jpg" /></span>
+          <span slot="content">
+            <h2 id="9" class="card-title mb-4">Maintenance</h2>
+            <p>
+              At [Company Name], we're a team of dedicated concrete
+              professionals passionate about building strong foundations,
+              literally. We're a small, local business with a big commitment to
+              quality craftsmanship and exceptional customer service. We service
+              the [City/Area] community and <a href="#">surrounding areas</a>,
+              specializing in [List a few key services].
+            </p>
+          </span>
+        </app-card-left>
+      </div>
+    </main>
     <!-- Footer section with social media icons and email link -->
     <app-footer></app-footer>
   </body>
 </html>
+<script>
+  const elementId = document.URL.split("#")[1];
+  function navigateToTarget() {
+    // Simulate an asynchronous operation
+    setTimeout(() => {
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.style.display = "block"; // Make sure the element is visible
+        element.scrollIntoView({ behavior: "smooth", block: "start" }); // Smoothly scroll to the element
+      }
+    }, 500); // Adjust timeout as needed based on your asynchronous operation
+  }
+  if (elementId) navigateToTarget();
+</script>
