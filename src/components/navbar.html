@@ -1,71 +1,83 @@
 <style></style>
-<nav class="navbar bg-base-200">
-  <div class="navbar md:w-fit">
-    <a class="btn btn-ghost text-xl" href="../pages/index.html">CRC</a>
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h8m-8 6h16"
-          />
-        </svg>
-      </div>
-      <ul
-        tabindex="0"
-        class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-      >
-        <li><a href="../pages/index.html">Home</a></li>
-        <li><a href="../pages/about.html">About us</a></li>
-        <li><a href="../pages/services.html">Services</a></li>
-        <li><a href="../pages/contact.html">Contact us</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="navbar hidden md:w-full md:flex md:navbar-end">
-    <ul class="menu menu-horizontal px-1 text-lg">
-      <li><a href="../pages/index.html">Home</a></li>
-      <li><a href="../pages/about.html">About us</a></li>
-      <div class="dropdown dropdown-hover text-lg">
-        <li>
-          <div tabindex="0">
-            <a href="../pages/services.html">Services</a>
-            <img src="../../icons/chevron-down.svg" />
-          </div>
-        </li>
+<div class="flex">
+  <a
+    style="
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+    "
+    class="w-28 md:w-32 h-24 md:h-28 p-2 font-bold bg-slate-500 text-white flex flex-col justify-end items-start"
+    href="../pages/index.html"
+  >
+    <span class="text-xs text-nowrap md:text-sm text-left">Country Rock</span
+    ><br /><span class="text-lg md:text-xl">Concrete</span>
+  </a>
+  <nav class="navbar bg-base-200">
+    <div class="navbar md:w-fit">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h8m-8 6h16"
+            />
+          </svg>
+        </div>
         <ul
           tabindex="0"
-          class="dropdown-content menu bg-base-100 rounded-box z-[1] min-w-64 p-2 shadow text-lg"
+          class="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li><a href="../pages/services.html#1">Concrete pads</a></li>
-          <li><a href="../pages/services.html#2">Driveways</a></li>
-          <li><a href="../pages/services.html#3">Walkways</a></li>
-          <li><a href="../pages/services.html#4">Patios</a></li>
-          <li><a href="../pages/services.html#5">Pool decks</a></li>
-          <li><a href="../pages/services.html#6">Foundations</a></li>
-          <li><a href="../pages/services.html#7">Concrete cutting</a></li>
-          <li><a href="../pages/services.html#8">Concrete sealing</a></li>
-          <li><a href="../pages/services.html#9">Maintenance</a></li>
+          <li><a href="../pages/index.html">Home</a></li>
+          <li><a href="../pages/about.html">About us</a></li>
+          <li><a href="../pages/services.html">Services</a></li>
+          <li><a href="../pages/contact.html">Contact us</a></li>
         </ul>
       </div>
-      <li><a href="../pages/contact.html">Contact us</a></li>
-    </ul>
+    </div>
+    <div class="navbar hidden md:w-full md:flex md:navbar-end">
+      <ul class="menu menu-lg menu-horizontal px-1">
+        <li><a href="../pages/index.html">Home</a></li>
+        <li><a href="../pages/about.html">About us</a></li>
+        <div class="dropdown dropdown-hover text-lg">
+          <li>
+            <div tabindex="0">
+              <a href="../pages/services.html">Services</a>
+              <img src="../../icons/chevron-down.svg" />
+            </div>
+          </li>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu bg-base-100 rounded-box z-[1] min-w-64 p-2 shadow text-lg"
+          >
+            <li><a href="../pages/services.html#1">Concrete pads</a></li>
+            <li><a href="../pages/services.html#2">Driveways</a></li>
+            <li><a href="../pages/services.html#3">Walkways</a></li>
+            <li><a href="../pages/services.html#4">Patios</a></li>
+            <li><a href="../pages/services.html#5">Pool decks</a></li>
+            <li><a href="../pages/services.html#6">Foundations</a></li>
+            <li><a href="../pages/services.html#7">Concrete cutting</a></li>
+            <li><a href="../pages/services.html#8">Concrete sealing</a></li>
+            <li><a href="../pages/services.html#9">Maintenance</a></li>
+          </ul>
+        </div>
+        <li><a href="../pages/contact.html">Contact us</a></li>
+      </ul>
 
-    <button class="md:flex">
-      <a href="../pages/contact.html" class="btn btn-primary text-lg"
-        >Free Quote</a
-      >
+      <button class="md:flex">
+        <a href="../pages/contact.html" class="btn btn-primary text-lg"
+          >Free Quote</a
+        >
+      </button>
+    </div>
+    <button class="navbar-end md:hidden">
+      <a href="../pages/contact.html" class="btn btn-primary">Free Quote</a>
     </button>
-  </div>
-  <button class="navbar-end md:hidden">
-    <a href="../pages/contact.html" class="btn btn-primary">Free Quote</a>
-  </button>
-</nav>
+  </nav>
+</div>
