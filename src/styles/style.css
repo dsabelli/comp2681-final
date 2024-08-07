@@ -50,6 +50,10 @@ html,
   font-size: 2.5rem;
   font-weight: 700;
 }
+.card-header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 
 p {
   font-size: 1.2rem;
