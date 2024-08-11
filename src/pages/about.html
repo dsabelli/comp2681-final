@@ -17,52 +17,113 @@
     <app-navbar></app-navbar>
 
     <!-- Main content area with hero section and personal introduction -->
-    <main class="">
-      <div class="bg-base-300">
-        <app-card-left
-          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
-          <span slot="content">
-            <h2 class="card-title mb-4">Country Rock Concrete</h2>
-            <p>
-              At [Company Name], we're a team of dedicated concrete
-              professionals passionate about building strong foundations,
-              literally. We're a small, local business with a big commitment to
-              quality craftsmanship and exceptional customer service. We service
-              the [City/Area] community and <a href="#">surrounding areas</a>,
-              specializing in [List a few key services].
-            </p>
-          </span>
-        </app-card-left>
+    <main class="lg:max-w-7xl mx-auto">
+      <div class="w-full">
+        <h1 class="text-center h1">About us</h1>
+        <img
+          class="md:float-left pr-8 max-w-xl mx-auto"
+          src="../../images/about-us.jpg"
+        />
+        <div class="mx-auto p-8">
+          <h2 class="card-header mb-2">Who we are</h2>
+          <p>
+            At Country Rock Concrete, we're dedicated concrete professionals
+            passionate about building strong foundations, literally. We're a
+            small, local business with a big commitment to quality craftsmanship
+            and exceptional customer service.
+          </p>
+
+          <p class="mt-4">
+            We service the [City/Area] community and
+            <a href="#">surrounding areas</a>, specializing in [List a few key
+            services].
+          </p>
+
+          <h2 class="card-header mt-4 mb-2">Our mission</h2>
+          <p>
+            No matter the size or scope of your project, we take pride in
+            delivering a smooth, efficient experience from start to finish. Our
+            team of experienced workers is highly skilled and committed to using
+            the latest techniques and materials.
+          </p>
+          <p class="mt-4">
+            We're passionate about exceeding your expectations and ensuring your
+            concrete project is built to last. We believe in open communication
+            and collaboration, working closely with you throughout the entire
+            process to understand your vision and bring it to life.
+          </p>
+          <p class="mt-4">
+            If you're looking for a reliable, trustworthy concrete contractor,
+            contact Country Rock Concrete today. We're happy to discuss your
+            project and answer any questions you may have.
+          </p>
+        </div>
       </div>
-      <div class="bg-base-100">
-        <app-card-right
-          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
-          <span slot="content">
-            <h2 class="card-title mb-4">Our mission</h2>
-            <p>
-              No matter the size or scope of your project, we take pride in
-              delivering a smooth, efficient experience from start to finish.
-              Our team of experienced [Workers' titles, e.g., concrete
-              finishers, project managers] is highly skilled and committed to
-              using the latest techniques and materials.
-            </p>
-            <p class="mt-4">
-              We're passionate about exceeding your expectations and ensuring
-              your concrete project is built to last. We believe in open
-              communication and collaboration, working closely with you
-              throughout the entire process to understand your vision and bring
-              it to life.
-            </p>
-            <p class="mt-4">
-              If you're looking for a reliable, trustworthy concrete contractor,
-              contact [Company Name] today. We're happy to discuss your project
-              and answer any questions you may have.
-            </p>
-          </span>
-        </app-card-right>
-      </div>
+      <h2 class="card-header mt-4 mb-2">Gallery</h2>
+      <div
+        id="grid"
+        class="clear-both grid lg:grid-cols-3 mx-auto lg:gap-8 justify-center"
+      ></div>
     </main>
+
     <!-- Footer section with social media icons and email link -->
     <app-footer></app-footer>
   </body>
 </html>
+<style>
+  .image-card-container {
+    width: 300px;
+    margin: 1rem 0;
+  }
+  .image-card {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    border-radius: var(--rounded-box, 1rem /* 16px */);
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+      0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  .card-text {
+    font-size: 1.2rem;
+  }
+</style>
+<script>
+  const images = [
+    "cutting-1.jpg",
+    "driveway-1.jpg",
+    "driveway-2.jpg",
+    "driveway-3.jpg",
+    "foundation-1.jpg",
+    "maintenance-1.jpg",
+    "pad-1.jpg",
+    "pad-2.jpg",
+    "pad-3.jpg",
+    "patio-1.jpg",
+    "patio-2.jpg",
+    "patio-3.jpg",
+    "patio-4.jpg",
+    "patio-5.jpg",
+    "pool-deck-1.jpg",
+    "pool-deck-2.jpg",
+    "sealing-1.jpg",
+    "walkway-1.jpg",
+    "walkway-2.jpg",
+    "walkway-3.jpg",
+  ];
+
+  const imgGrid = document.getElementById("grid");
+  for (i = 0; i < images.length; i++) {
+    imgGrid.innerHTML += `
+    <div class="image-card-container">
+      <img class="image-card" src=../../images/${images[i]}>
+    </div>
+    `;
+  }
+  const gridItems = document.querySelectorAll(".image-card");
+</script>
