@@ -20,9 +20,37 @@
         super();
         const shadowRoot = this.attachShadow({ mode: "open" });
         shadowRoot.adoptedStyleSheets = [styleSheet];
-        shadowRoot.appendChild(template.content.cloneNode(true));
+
+        // Clone the template content
+        const clone = template.content.cloneNode(true);
+
+        // Append the clone to the shadow root
+        shadowRoot.appendChild(clone);
+
+        // Listen for attribute changes
+        this.addEventListener("attributeChanged", (event) => {
+          if (event.attributeName === "bg-url") {
+            this.updateBackgroundImage(event.target.getAttribute("bg-url"));
+          }
+        });
+      }
+
+      connectedCallback() {
+        // Initial check for bg-url attribute
+        this.updateBackgroundImage(this.getAttribute("bg-url"));
+      }
+
+      updateBackgroundImage(url) {
+        if (!url) return; // Ensure there's a valid URL
+
+        // Assuming your card has a specific class where you want to apply the background
+        const card = this.shadowRoot.querySelector(".card");
+        if (card) {
+          card.style.backgroundImage = `url(${url})`;
+        }
       }
     }
+
     // Define the custom element
     customElements.define("app-tile", TileElement);
   } catch (error) {

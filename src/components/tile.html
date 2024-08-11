@@ -1,13 +1,15 @@
 <div
-  class="card bg-base-300 shadow-xl w-full max-w-72 md:max-w-96 h-72 md:h-96"
+  class="hero card bg-base-300 shadow-xl text-secondary w-full max-w-72 md:max-w-96"
 >
+  <div class="hero-overlay bg-opacity-70 rounded-xl"></div>
   <div
-    class="flex flex-auto flex-col justify-around gap-4 md:gap-8 p-8 items-center"
+    bg-url=""
+    class="flex flex-auto flex-col justify-around gap-4 md:gap-8 p-8 items-center h-72 md:h-96 bg-clip-text bg-origin-padding bg-contain"
   >
-    <h2 class="text-center text-2xl lg:text-3xl">
+    <h2 class="text-center text-2xl lg:text-3xl font-bold">
       <slot name="heading"></slot>
     </h2>
-    <p class="text-center text-base md:text-xl">
+    <p class="text-center text-base md:text-xl font-bold">
       <slot name="p"></slot>
     </p>
     <button>
