@@ -2,7 +2,7 @@
   class="card bg-base-300 shadow-xl w-full max-w-72 md:max-w-96 h-72 md:h-96"
 >
   <div
-    class="flex flex-auto flex-col justify-center gap-4 md:gap-8 p-8 items-center"
+    class="flex flex-auto flex-col justify-around gap-4 md:gap-8 p-8 items-center"
   >
     <h2 class="text-center text-2xl lg:text-3xl">
       <slot name="heading"></slot>
@@ -10,7 +10,7 @@
     <p class="text-center text-base md:text-xl">
       <slot name="p"></slot>
     </p>
-    <button class="btn btn-accent text-lg">
+    <button>
       <slot name="btn"></slot>
     </button>
   </div>
