@@ -20,11 +20,22 @@
 
     <!-- Main content area with hero section and personal introduction -->
     <main>
-      <app-hero></app-hero>
+      <app-hero>
+        <span slot="heading"
+          >Country Rock <span class="text-7xl md:text-8xl">Concrete</span></span
+        ><span style="font-weight: 700" slot="p"
+          >Quality concrete solutions for your&nbsp;home</span
+        >
+        <span slot="btn"
+          ><a class="btn btn-lg btn-primary" href="./services.html"
+            >Learn more</a
+          ></span
+        >
+      </app-hero>
 
       <div class="bg-base-300">
         <app-card-left
-          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
+          ><span slot="img"><img src="../../images/hero.jpg" /></span>
           <span slot="content">
             <h2 class="card-title mb-4">Country Rock Concrete</h2>
             <p>
@@ -70,92 +81,131 @@
           </span></app-card-left
         >
       </div>
-      <h2 class="text-5xl md:text-6xl text-center mt-8">Services</h2>
+      <h2 class="text-5xl md:text-6xl text-center mt-12">Services</h2>
       <div class="w-full my-12 flex justify-center bg-base-100">
         <div id="grid" class="grid gap-8 md:grid-cols-3 md:grid-rows-3">
           <app-tile
             ><span slot="heading">Concrete pads</span
             ><span slot="p"
               >Need a solid base for your shed, RV, or outdoor equipment? Our
-              concrete pads are built to last.</span
+              concrete pads are built to&nbsp;last.</span
             >
             <span slot="btn"
-              ><a href="./services.html#service-1">Learn more</a></span
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-1"
+                >Learn more</a
+              ></span
             ></app-tile
           >
           <app-tile
             ><span slot="heading">Driveways</span
             ><span slot="p"
               >We can create a stunning and durable driveway that complements
-              your property's style.</span
+              your property's&nbsp;style.</span
             >
             <span slot="btn"
-              ><a href="./services.html#service-2">Learn more</a></span
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-2"
+                >Learn more</a
+              ></span
             ></app-tile
           >
           <app-tile
             ><span slot="heading">Walkways</span
             ><span slot="p"
-              >Transform your outdoor space with elegant and functional
-              walkways.</span
+              >Transform your outdoor space with elegant and
+              functional&nbsp;walkways.</span
             >
             <span slot="btn"
-              ><a href="./services.html#service-3">Learn more</a></span
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-3"
+                >Learn more</a
+              ></span
             ></app-tile
           >
           <app-tile
             ><span slot="heading">Patios</span
             ><span slot="p"
-              >Create an outdoor oasis with a beautiful concrete patio.</span
+              >Create an outdoor oasis with a beautiful
+              concrete&nbsp;patio.</span
             >
             <span slot="btn"
-              ><a href="./services.html#service-4">Learn more</a></span
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-4"
+                >Learn more</a
+              ></span
             ></app-tile
           >
           <app-tile
             ><span slot="heading">Pool decks</span
             ><span slot="p"
-              >Enhance your pool area with a stylish and safe concrete pool
-              deck.</span
+              >Enhance your pool area with a stylish and safe concrete
+              pool&nbsp;deck.</span
             >
             <span slot="btn"
-              ><a href="./services.html#service-5">Learn more</a></span
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-5"
+                >Learn more</a
+              ></span
             ></app-tile
           >
           <app-tile
             ><span slot="heading">Foundations</span
             ><span slot="p"
-              >A strong foundation is essential for any structure.</span
+              >A strong foundation is essential for any&nbsp;structure.</span
             >
             <span slot="btn"
-              ><a href="./services.html#service-6">Learn more</a></span
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-6"
+                >Learn more</a
+              ></span
             ></app-tile
           >
           <app-tile
             ><span slot="heading">Concrete cutting</span
-            ><span slot="p">Need to make precise cuts in your concrete?</span>
+            ><span slot="p"
+              >Need to make precise cuts in your&nbsp;concrete?</span
+            >
             <span slot="btn"
-              ><a href="./services.html#service-7">Learn more</a></span
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-7"
+                >Learn more</a
+              ></span
             ></app-tile
           >
           <app-tile
             ><span slot="heading">Concrete sealing</span
             ><span slot="p"
-              >Protect your concrete investment with our professional sealing
-              services.</span
+              >Protect your concrete investment with our professional
+              sealing&nbsp;services.</span
             >
             <span slot="btn"
-              ><a href="./services.html#service-8">Learn more</a></span
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-8"
+                >Learn more</a
+              ></span
             ></app-tile
           >
           <app-tile
             ><span slot="heading">Maintenance</span
             ><span slot="p"
               >Keep your concrete looking its best and extending its lifespan
-              with our expert maintenance services.</span
+              with our expert maintenance&nbsp;services.</span
             >
             <span slot="btn"
-              ><a href="./services.html#service-9">Learn more</a></span
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-9"
+                >Learn more</a
+              ></span
             ></app-tile
           >
         </div>
