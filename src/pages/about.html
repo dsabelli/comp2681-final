@@ -21,11 +21,12 @@
       <div class="w-full">
         <h1 class="text-center h1">About us</h1>
         <img
-          class="md:float-left pr-8 max-w-xl mx-auto"
+          class="lg:float-left pr-8 max-w-xl mx-auto hidden lg:block"
           src="../../images/about-us.jpg"
         />
+        <img class="w-full lg:hidden" src="../../images/about-us-mobile.jpg" />
         <div class="mx-auto p-8">
-          <h2 class="card-header mb-2">Who we are</h2>
+          <h2 class="text-4xl mb-2">Who we are</h2>
           <p>
             At Country Rock Concrete, we're dedicated concrete professionals
             passionate about building strong foundations, literally. We're a
@@ -39,7 +40,7 @@
             services].
           </p>
 
-          <h2 class="card-header mt-4 mb-2">Our mission</h2>
+          <h2 class="text-4xl mt-4 mb-2">Our mission</h2>
           <p>
             No matter the size or scope of your project, we take pride in
             delivering a smooth, efficient experience from start to finish. Our
@@ -59,10 +60,10 @@
           </p>
         </div>
       </div>
-      <h2 class="card-header mt-4 mb-2">Gallery</h2>
+      <h2 class="clear text-4xl text-center my-8 lg:mt-16">Our work</h2>
       <div
         id="grid"
-        class="clear-both grid lg:grid-cols-3 mx-auto lg:gap-8 justify-center"
+        class="clear-both grid lg:grid-cols-[325px_325px_325px] mx-auto lg:gap-8 justify-center mb-12"
       ></div>
     </main>
 
@@ -95,7 +96,6 @@
 </style>
 <script>
   const images = [
-    "cutting-1.jpg",
     "driveway-1.jpg",
     "driveway-2.jpg",
     "driveway-3.jpg",
@@ -115,15 +115,23 @@
     "walkway-1.jpg",
     "walkway-2.jpg",
     "walkway-3.jpg",
+    "cutting-1.jpg",
   ];
 
   const imgGrid = document.getElementById("grid");
   for (i = 0; i < images.length; i++) {
-    imgGrid.innerHTML += `
-    <div class="image-card-container">
+    imgGrid.innerHTML += `    
+   <div class="image-card-container" onclick="my_modal_${i}.showModal()">
       <img class="image-card" src=../../images/${images[i]}>
+   </div>
+   <dialog id="my_modal_${i}" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box !max-w-3xl">
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      <img class="p-6 " src=../../images/${images[i]}> 
+      </form>
     </div>
+  </dialog>
     `;
   }
-  const gridItems = document.querySelectorAll(".image-card");
 </script>
