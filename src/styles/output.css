@@ -2837,6 +2837,10 @@ html {
   padding-right: 2rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3285,6 +3289,10 @@ p {
 
   .lg\:gap-8 {
     gap: 2rem;
+  }
+
+  .lg\:pt-16 {
+    padding-top: 4rem;
   }
 
   .lg\:text-2xl {

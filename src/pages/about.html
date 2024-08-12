@@ -17,8 +17,8 @@
     <app-navbar></app-navbar>
 
     <!-- Main content area with hero section and personal introduction -->
-    <main class="lg:max-w-7xl mx-auto">
-      <div class="w-full">
+    <main class="w-full">
+      <div class="w-full lg:max-w-7xl mx-auto pb-8 mb-8">
         <h1 class="text-center h1">About us</h1>
         <img
           class="lg:float-left pr-8 max-w-xl mx-auto hidden lg:block"
@@ -60,11 +60,15 @@
           </p>
         </div>
       </div>
-      <h2 class="clear text-4xl text-center my-8 lg:mt-16">Our work</h2>
-      <div
-        id="grid"
-        class="clear-both grid lg:grid-cols-[325px_325px_325px] mx-auto lg:gap-8 justify-center mb-12"
-      ></div>
+      <div class="w-full bg-base-300 py-8">
+        <div class="lg:max-w-7xl mx-auto">
+          <h2 class="clear text-5xl text-center my-8 lg:mt-16">Our work</h2>
+          <div
+            id="grid"
+            class="clear-both grid lg:grid-cols-[325px_325px_325px] mx-auto lg:gap-8 justify-center mb-12"
+          ></div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer section with social media icons and email link -->
