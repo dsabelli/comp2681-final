@@ -33,7 +33,7 @@
           ></span
         >
       </app-hero>
-
+      <div class="w-full h-12 bg-base-200"></div>
       <div class="bg-base-300">
         <app-card-left
           ><span slot="img"><img src="../../images/hero.jpg" /></span>
@@ -413,7 +413,6 @@
     const items = Array.from(carousel.querySelectorAll(".carousel-item"));
     const len = items.length;
     let width = items[0].offsetWidth + 32;
-    console.log(width);
     let screen = window.innerWidth;
     const BREAK = 1024;
     const DESKTOP = 3;
@@ -435,6 +434,6 @@
       // Hide the current item and show the next item
     }
 
-    setInterval(moveToNextItem, 1000); // Call moveToNextItem every 5 seconds
+    setInterval(moveToNextItem, 5000); // Call moveToNextItem every 5 seconds
   });
 </script>
