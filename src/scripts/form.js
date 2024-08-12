@@ -15,12 +15,12 @@
     template.innerHTML = htmlContent;
 
     // Fetch API key from Netlify function
-    // const apiKeyResponse = await fetch("../../netlify/functions/getApiKey.js");
-    // const apiKeyData = await apiKeyResponse.json();
-    // const apiKey = apiKeyData.apiKey;
+    const apiKeyResponse = await fetch("../../netlify/functions/getApiKey.js");
+    const apiKeyData = await apiKeyResponse.json();
+    const apiKey = apiKeyData.apiKey;
     (function () {
       emailjs.init({
-        publicKey: "jzW08tXATahZEmECf",
+        publicKey: apiKey,
       });
     })();
 
@@ -29,14 +29,34 @@
       constructor() {
         super();
         const shadowRoot = this.attachShadow({ mode: "open" });
+
+        // Assuming styleSheet and template are already defined elsewhere
         shadowRoot.adoptedStyleSheets = [styleSheet];
         shadowRoot.appendChild(template.content.cloneNode(true));
 
+        // Correctly add event listeners to all elements with the class ".input"
+        const inputs = shadowRoot.querySelectorAll(".input,select");
+        inputs.forEach((input) => {
+          input.addEventListener("blur", function (event) {
+            // Your validation logic here
+            const value = event.target.value.trim(); // Get the trimmed value of the input
+
+            if (event.target.checkValidity()) {
+              // Assuming minimum length requirement is 1
+              event.target.classList.remove("input-error"); // Remove error state
+              event.target.classList.add("input-success"); // Add success state
+            } else {
+              event.target.classList.remove("input-success"); // Remove success state
+              event.target.classList.add("input-error"); // Add error state
+            }
+          });
+        });
+
+        // Existing submit event listener
         shadowRoot
           .querySelector("#contact-form")
           .addEventListener("submit", function (event) {
             event.preventDefault();
-            // these IDs from the previous steps
             emailjs.sendForm("service_mmlaf1r", "template_79xcu8k", this).then(
               () => {
                 window.alert("SUCCESS!");
@@ -48,6 +68,7 @@
           });
       }
     }
+
     // Define the custom element
     customElements.define("app-form", FormElement);
   } catch (error) {
