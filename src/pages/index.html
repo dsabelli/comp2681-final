@@ -11,6 +11,7 @@
     <script src="../scripts/cardLeft.js" defer></script>
     <script src="../scripts/cardRight.js" defer></script>
     <script src="../scripts/tile.js" defer></script>
+    <script src="../scripts/reviewCard.js" defer></script>
     <title>Country Rock Concrete</title>
   </head>
   <!-- Body section contains the main content of the webpage -->
@@ -51,7 +52,7 @@
       </div>
       <div class="bg-base-100">
         <app-card-right
-          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
+          ><span slot="img"><img src="../../images/hero.jpg" /></span>
           <span slot="content">
             <h2 class="card-title mb-4">Country Rock Concrete</h2>
             <p>
@@ -65,21 +66,65 @@
           </span></app-card-right
         >
       </div>
-      <div class="bg-base-300">
-        <app-card-left
-          ><span slot="img"><img src="../../images/2022-03-07.jpg" /></span>
-          <span slot="content">
-            <h2 class="card-title mb-4">Country Rock Concrete</h2>
-            <p>
-              At [Company Name], we're a team of dedicated concrete
-              professionals passionate about building strong foundations,
-              literally. We're a small, local business with a big commitment to
-              quality craftsmanship and exceptional customer service. We service
-              the [City/Area] community and <a href="#">surrounding areas</a>,
-              specializing in [List a few key services].
-            </p>
-          </span></app-card-left
+
+      <div class="w-full grid grid-cols-3 justify-center my-12">
+        <div
+          id="myCarousel"
+          class="carousel carousel-center bg-base-200 rounded-box space-x-4 p-4"
         >
+          <div class="carousel-item">
+            <app-review-card
+              src-url="https://api.dicebear.com/9.x/initials/svg?seed=D"
+            >
+              <span slot="name">Dan Sabelli</span>
+              <span slot="date">08-11-2024</span>
+              <span slot="review">
+                At [Company Name], we're a team of dedicated concrete
+                professionals passionate about building strong foundations,
+                literally. We're a small, local business with a big commitment
+                to</span
+              >
+            </app-review-card>
+          </div>
+          <div class="carousel-item">
+            <app-review-card
+              src-url="https://api.dicebear.com/9.x/initials/svg?seed=D"
+            >
+              <span slot="name">Dan Sasdfsabelli</span>
+              <span slot="date">08-11-2024</span>
+              <span slot="review">
+                literally. We're a small, local business with a big commitment
+                to quality craftsmanship and exceptional customer service. We
+                service the [City/Area] community and
+                <a href="#">surrounding areas</a></span
+              >
+            </app-review-card>
+          </div>
+          <div class="carousel-item">
+            <app-review-card
+              src-url="https://api.dicebear.com/9.x/initials/svg?seed=D"
+            >
+              <span slot="name">Van Sabelli</span>
+              <span slot="date">08-11-2024</span>
+              <span slot="review">
+                At [Coons, literally. We're a small, local business with a big
+                commitment to</span
+              >
+            </app-review-card>
+          </div>
+          <div class="carousel-item">
+            <app-review-card
+              src-url="https://api.dicebear.com/9.x/initials/svg?seed=D"
+            >
+              <span slot="name">Van Sabelli</span>
+              <span slot="date">08-11-2024</span>
+              <span slot="review">
+                At [Coons, literally. We're a small, local business with a big
+                commitment to</span
+              >
+            </app-review-card>
+          </div>
+        </div>
       </div>
       <h2 class="text-5xl md:text-6xl text-center mt-12">Services</h2>
       <div class="w-full my-12 flex justify-center bg-base-100">
@@ -216,3 +261,42 @@
     <app-footer></app-footer>
   </body>
 </html>
+
+<style>
+  .carousel {
+    position: relative;
+    overflow: hidden; /* Ensures content doesn't spill out */
+  }
+
+  .carousel-item {
+    transition: transform 1s; /* Smooth transition effect */
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("myCarousel");
+    const items = Array.from(carousel.querySelectorAll(".carousel-item"));
+    const totalItems = items.length;
+
+    // Function to calculate translation based on current index
+    const calculateTranslation = (currentIndex) =>
+      -((currentIndex * 200) / totalItems);
+
+    // Initially set the translation for the first item
+    items.forEach((item, index) => {
+      item.style.transform = `translateX(${calculateTranslation(index)}%)`;
+    });
+
+    // Auto advance every 2 seconds
+    let currentIndex = 0;
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      items.forEach((item, index) => {
+        item.style.transform = `translateX(${calculateTranslation(
+          currentIndex
+        )}%)`;
+      });
+    }, 5000); // Advance every 2 seconds
+  });
+</script>

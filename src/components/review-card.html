@@ -1,0 +1,53 @@
+<style>
+  .image-container {
+    position: relative;
+    width: fit-content;
+  }
+  .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .google {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+</style>
+
+<div class="card bg-base-100 w-full max-w-md shadow-xl">
+  <div class="card-body">
+    <div class="image-container">
+      <img class="card-img w-24 rounded-full" src-url="" src="" alt="Initial" />
+      <img
+        class="google w-6 bg-white rounded-full"
+        src="../../icons/google.svg"
+        alt="Google Icon"
+      />
+    </div>
+
+    <h2 class="text-center text-xl lg:text-2xl">
+      <slot name="name"></slot>
+    </h2>
+    <p class="text-center text-sm md:text-base">
+      <slot name="date"></slot>
+    </p>
+    <div class="flex">
+      <img class="w-6" src="../../icons/star.svg" />
+      <img class="w-6" src="../../icons/star.svg" />
+      <img class="w-6" src="../../icons/star.svg" />
+      <img class="w-6" src="../../icons/star.svg" />
+      <img class="w-6" src="../../icons/star.svg" />
+    </div>
+    <p class="text-center text-base md:text-lg">
+      <slot name="review"></slot>
+    </p>
+  </div>
+</div>
