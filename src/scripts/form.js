@@ -15,14 +15,14 @@
     template.innerHTML = htmlContent;
 
     // Fetch API key from Netlify function
-    const apiKeyResponse = await fetch("../../netlify/functions/getApiKey.js");
-    const apiKeyData = await apiKeyResponse.json();
-    const apiKey = apiKeyData.apiKey;
-    (function () {
-      emailjs.init({
-        publicKey: apiKey,
-      });
-    })();
+    // const apiKeyResponse = await fetch("../../netlify/functions/getApiKey.js");
+    // const apiKeyData = await apiKeyResponse.json();
+    // const apiKey = apiKeyData.apiKey;
+    // (function () {
+    //   emailjs.init({
+    //     publicKey: apiKey,
+    //   });
+    // })();
 
     // Define the custom element
     class FormElement extends HTMLElement {
