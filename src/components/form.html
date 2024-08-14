@@ -13,7 +13,7 @@
 >
   <!-- Form fields for user input -->
   <!-- service select dropdown -->
-  <label class="required" for="service">Service:</label><br />
+  <label class="required" for="service">Service:</label>
   <select
     class="select text-lg border-2 w-full max-w-xl min-w-64 md:min-w-80"
     id="service"
@@ -30,9 +30,9 @@
     <option value="cutting">Concrete cutting</option>
     <option value="sealing">Concrete sealing</option>
     <option value="maintenance">Maintenance</option>
-    <!-- Other options --></select
-  ><br />
-  <label class="required" for="firstName">First Name:</label><br />
+    <!-- Other options -->
+  </select>
+  <label class="required" for="firstName">First Name:</label>
   <input
     class="input text-lg input-bordered border-2 w-full max-w-xl min-w-64 md:min-w-80 valid:input-success"
     type="text"
@@ -41,8 +41,8 @@
     required
     title="Please enter your first name."
     placeholder=" "
-  /><br />
-  <label class="required" for="lastName">Last Name:</label><br />
+  />
+  <label class="required" for="lastName">Last Name:</label>
   <input
     class="input text-lg input-bordered border-2 w-full max-w-xl min-w-64 md:min-w-80"
     type="text"
@@ -51,8 +51,8 @@
     required
     title="Please enter your last name."
     placeholder=" "
-  /><br />
-  <label class="required" for="address">Address:</label><br />
+  />
+  <label class="required" for="address">Address:</label>
   <input
     class="input text-lg input-bordered border-2 w-full max-w-xl min-w-64 md:min-w-80"
     type="text"
@@ -61,9 +61,9 @@
     required
     title="Please enter your address."
     placeholder=" "
-  /><br />
+  />
 
-  <label class="required" for="phone">Phone Number:</label><br />
+  <label class="required" for="phone">Phone Number:</label>
   <input
     class="input text-lg input-bordered border-2 w-full max-w-xl min-w-64 md:min-w-80"
     type="tel"
@@ -72,18 +72,17 @@
     required
     title="123-456-7890 or 123 456-7890"
     placeholder=" "
-    pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}|[0-9]{3}\s?[0-9]{3}-?[0-9]{4}"
-  /><!-- Pattern for phone number validation -->
-  <br />
+    pattern="^\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}|\(?[0-9]{3}\)?\s?[0-9]{3}-?[0-9]{4}$"
+  />
+  <!-- Pattern for phone number validation -->
 
   <!--Message text area -->
-  <label for="message">Message:</label><br />
+  <label for="message">Message:</label>
   <textarea
     class="textarea textarea-bordered w-full max-w-xl min-w-64 md:min-w-80"
     id="message"
     name="message"
-  ></textarea
-  ><br />
+  ></textarea>
   <!-- Form submission and reset buttons -->
   <div class="w-full flex justify-center my-8">
     <button
