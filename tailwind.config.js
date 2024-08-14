@@ -7,7 +7,7 @@ module.exports = {
         mytheme: {
           primary: "#fed719",
           secondary: "#e8e6e3",
-          accent: "#5e92ed",
+          accent: "#23629f",
           neutral: "#626262",
           "base-100": "#f7f7f7",
           "base-200": "#eaeaea",
@@ -22,7 +22,7 @@ module.exports = {
         myDarkTheme: {
           primary: "#fed719",
           secondary: "#e8e6e3",
-          accent: "#5e92ed",
+          accent: "#23629f",
           neutral: "#626262",
           "base-100": "#000",
           "base-200": "#eaeaea",
