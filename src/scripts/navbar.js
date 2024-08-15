@@ -1,7 +1,8 @@
+// Asynchronously loads a module named 'simpleLogo.js' from the current directory
 async function loadModule() {
   const module = await import("./simpleLogo.js");
 }
-
+// Attempts to load the 'simpleLogo.js' module and logs any errors to the console
 loadModule().catch((error) => console.error("Failed to load module:", error));
 
 // Combine fetching CSS and HTML into a single promise chain
@@ -28,8 +29,9 @@ loadModule().catch((error) => console.error("Failed to load module:", error));
         shadowRoot.adoptedStyleSheets = [styleSheet];
         shadowRoot.appendChild(template.content.cloneNode(true));
 
+        // Dynamically inserts the app-logo custom element into the logo-footer slot
         const logo = shadowRoot.getElementById("logo-nav");
-        logo.innerHTML = `<app-logo></app-logo>`;
+        logo.innerHTML = `<app-logo></app-logo>`; // Inserts the app-logo element
       }
     }
     // Define the custom element

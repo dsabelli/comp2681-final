@@ -7,7 +7,7 @@
     const styleSheet = new CSSStyleSheet();
     styleSheet.replaceSync(cssText);
 
-    // Load the contentCard HTML content
+    // Load the HTML content
     const htmlComponent = "../components/card-left.html";
     const htmlResponse = await fetch(htmlComponent);
     const htmlContent = await htmlResponse.text();

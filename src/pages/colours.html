@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/output.css" />
     <script src="../scripts/navbar.js" defer></script>
     <script src="../scripts/footer.js" defer></script>
-    <title>Country Rock Concrete</title>
+    <title>Country Rock Concrete | Colours</title>
   </head>
   <!-- Body section contains the main content of the webpage -->
   <body>
@@ -29,6 +29,7 @@
           your outdoor space today!
         </p>
       </div>
+      <!-- Grid container for displaying items, with specific styling for larger screens -->
       <div id="grid" class="md:w-3/4 grid md:grid-cols-4"></div>
     </main>
     <!-- Footer section with social media icons and email link -->
@@ -36,18 +37,26 @@
   </body>
 </html>
 <style>
+  /* Styles for the container holding each colour card */
   .colour-card-container {
-    width: 144px;
-    margin: 1rem 0;
+    width: 144px; /* Fixed width of the container */
+    margin: 1rem 0; /* Margin around the container, creating space between rows */
   }
+
+  /* Styles for individual colour cards within the container */
   .colour-card {
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 144px;
-    margin-bottom: 0.25rem;
-    border-radius: var(--rounded-box, 1rem /* 16px */);
+    cursor: pointer; /* Changes cursor to pointer on hover, indicating interactivity */
+    position: relative; /* Allows positioning absolutely within this element */
+    display: flex; /* Uses Flexbox layout */
+    flex-direction: column; /* Arranges children vertically */
+    height: 144px; /* Fixed height of the card */
+    margin-bottom: 0.25rem; /* Bottom margin for spacing between cards */
+    border-radius: var(
+      --rounded-box,
+      1rem
+    ); /* Rounded corners, defaulting to 1rem if variable not set */
+
+    /* Shadow effects using TailwindCSS variables */
     --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
       0 8px 10px -6px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
@@ -55,11 +64,14 @@
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
       var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
+
+  /* Styles for text within the card */
   .card-text {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Text size */
   }
 </style>
 <script>
+  // Array of objects containing colour as RGBA and colour name
   const colours = [
     { colour: "rgba(104, 92, 71,1)", name: "Adobe<br>61078" },
     { colour: "rgba(175, 128, 80,1)", name: "Autumn Gold<br>5844" },
@@ -91,8 +103,12 @@
     { colour: "rgba(156,132,99,1)", name: "Omaha Tan<br>5084" },
   ];
 
+  // Get the grid container element
   const colourGrid = document.getElementById("grid");
+
+  // Loop through each array item
   for (i = 0; i < colours.length; i++) {
+    // Dynamically create HTML content for each colour card
     colourGrid.innerHTML += `
     <div class="colour-card-container">
       <div class="colour-card" style="background-color: ${colours[i].colour}"></div>
@@ -100,17 +116,23 @@
     </div>
     `;
   }
+
+  // After populating the grid, select all elements with the class 'colour-card'
   const gridItems = document.querySelectorAll(".colour-card");
+
+  // Add a click event listener to each selected item
   gridItems.forEach((item) =>
+    // When clicked, attempt to copy the background colour of the clicked item to the clipboard
     item.addEventListener("click", () => {
       try {
-        navigator.clipboard
-          .writeText(item.style.backgroundColor)
-          .then(
-            window.alert(`Colour code: ${item.style.backgroundColor} copied!`)
-          );
+        // Use the Clipboard API to write the background colour value to the clipboard
+        navigator.clipboard.writeText(item.style.backgroundColor).then(() => {
+          // On success, alert the user with the copied colour code
+          window.alert(`Colour code: ${item.style.backgroundColor} copied!`);
+        });
       } catch (error) {
-        console.log(error);
+        // If an error occurs during the copying process, alert the user with the error message
+        window.alert(error);
       }
     })
   );

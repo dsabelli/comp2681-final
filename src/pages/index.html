@@ -21,22 +21,33 @@
 
     <!-- Main content area with hero section and personal introduction -->
     <main>
+      <!-- Custom hero component for the website header -->
       <app-hero>
-        <span slot="heading"
-          >Country Rock <span class="text-7xl md:text-8xl">Concrete</span></span
-        ><span style="font-weight: 700" slot="p"
-          >Quality concrete solutions for your&nbsp;home</span
-        >
-        <span slot="btn"
-          ><a class="btn btn-lg btn-primary" href="./services.html"
+        <!-- Slot for the hero heading, with nested span for styling -->
+        <span slot="heading">
+          Country Rock
+          <!-- Larger font size on medium and larger screens -->
+          <span class="text-7xl md:text-8xl">Concrete</span>
+        </span>
+        <!-- Slot for the hero paragraph, emphasizing the company's focus -->
+        <span style="font-weight: 700" slot="p">
+          Quality concrete solutions for your&nbsp;home
+        </span>
+        <!-- Slot for the hero button, linking to the services page -->
+        <span slot="btn">
+          <a class="btn btn-lg btn-primary" href="./services.html"
             >Learn more</a
-          ></span
-        >
+          >
+        </span>
       </app-hero>
+      <!-- A spacer div for visual separation, with a specific background color -->
       <div class="w-full h-12 bg-base-200"></div>
+      <!-- Card component for showcasing a service offering -->
       <div class="bg-base-300">
-        <app-card-left
-          ><span slot="img"><img src="../../images/maintenance-1.jpg" /></span>
+        <app-card-left>
+          <!-- Slot for the service image, with an image source -->
+          <span slot="img"><img src="../../images/maintenance-1.jpg" /></span>
+          <!-- Slot for the service content, including a title and description -->
           <span slot="content">
             <h2 class="card-header mb-4">Transform your space!</h2>
             <p>
@@ -49,8 +60,8 @@
               experienced team is committed to delivering exceptional results
               and exceeding your expectations.
             </p>
-          </span></app-card-left
-        >
+          </span>
+        </app-card-left>
       </div>
       <div class="bg-base-100">
         <app-card-right
@@ -67,12 +78,16 @@
           </span></app-card-right
         >
       </div>
+      <!-- Title for the Testimonials section, with responsive font sizing and center alignment -->
       <h2 class="text-5xl md:text-6xl text-center mt-12">Testimonials</h2>
+      <!-- Carousel container for testimonials, with full width, spaced items, maximum width, rounded corners, overflow control, padding, margin, and auto centering -->
       <div
         id="myCarousel"
         class="w-full flex justify-between gap-8 max-w-7xl bg-base-200 rounded-box overflow-hidden p-8 my-12 mx-auto"
       >
+        <!-- Individual carousel item for each testimonial -->
         <div class="carousel-item">
+          <!-- Custom review card component for displaying testimonials -->
           <app-review-card
             src-url="https://api.dicebear.com/9.x/initials/svg?seed=S"
           >
@@ -223,25 +238,30 @@
           </app-review-card>
         </div>
       </div>
-
+      <!-- Title for the Services section, with responsive font sizing and center alignment -->
       <h2 class="text-5xl md:text-6xl text-center mt-12">Services</h2>
+      <!-- Container div for the services grid, with full width, vertical margins, centered content, background color, and flexbox properties for layout -->
       <div class="w-full my-12 flex justify-center bg-base-100">
+        <!-- Grid container for organizing tiles, with specified gap and responsive column and row configuration -->
         <div id="grid" class="grid gap-8 md:grid-cols-3 md:grid-rows-3">
-          <app-tile bg-url="../../images/pad-1.jpg"
-            ><span slot="heading">Concrete pads</span
-            ><span slot="p"
-              >Need a solid base for your shed, RV, or outdoor equipment? Our
-              concrete pads are built to&nbsp;last.</span
-            >
-            <span slot="btn"
-              ><a
+          <!-- Tile component for showcasing a service, with a background image -->
+          <app-tile bg-url="../../images/pad-1.jpg">
+            <!-- Slot for the tile heading -->
+            <span slot="heading">Concrete pads</span>
+            <!-- Slot for the tile description -->
+            <span slot="p">
+              Need a solid base for your shed, RV, or outdoor equipment? Our
+              concrete pads are built to&nbsp;last.
+            </span>
+            <!-- Slot for the tile button, linking to the services page with a specific service ID -->
+            <span slot="btn">
+              <a
                 class="btn btn-primary text-lg"
                 href="./services.html#service-1"
                 >Learn more</a
-              ></span
-            ></app-tile
-          >
-
+              >
+            </span>
+          </app-tile>
           <app-tile bg-url="../../images/driveway-2.jpg"
             ><span slot="heading">Driveways</span
             ><span slot="p"
@@ -410,32 +430,55 @@
 </style>
 
 <script>
+  // Wait until the DOM is fully loaded
   document.addEventListener("DOMContentLoaded", function () {
+    // Get the carousel element by its ID
     const carousel = document.getElementById("myCarousel");
+    // Convert NodeList of carousel items to an array
     const items = Array.from(carousel.querySelectorAll(".carousel-item"));
-    const len = items.length;
-    let width = items[0].offsetWidth + 32;
-    let screen = window.innerWidth;
+    // Interval in milliseconds
+    const MILLIS = 5000;
+    // Breakpoint for distinguishing desktop and mobile views
     const BREAK = 1024;
+    // Number of items to show on desktop screens
     const DESKTOP = 3;
+    // Number of items to show on mobile screens
     const MOBILE = 1;
+    // Padding around reviewCards
+    const PADDING = 32;
+    // Calculate the total number of items
+    const len = items.length;
+    // Initial width calculation for each item plus some extra pixels for spacing
+    let width = items[0].offsetWidth + PADDING;
+    // Current window width
+    let screen = window.innerWidth;
 
+    // Starting position for the carousel items
     let x = -width;
+
+    // Function to move the carousel items
     function moveToNextItem() {
-      for (i = 0; i < len; i++) {
-        items[i].style.transform = `translateX(${x}px)`; // Move the current item off-screen
+      // Apply translation to each item to move them horizontally
+      for (let i = 0; i < len; i++) {
+        items[i].style.transform = `translateX(${x}px)`;
       }
+
+      // Determine if the carousel should loop back to the beginning
+      // Leaves three reviewCards in view on desktop
       if ((x * -1) / width > len - (screen >= BREAK ? DESKTOP : MOBILE)) {
-        for (i = 0; i < len; i++) {
-          items[i].style.transform = `translateX(${0}px)`; // Move the current item off-screen
+        // Reset the carousel items to their original positions
+        for (let i = 0; i < len; i++) {
+          items[i].style.transform = `translateX(${0}px)`;
         }
+        // Reset the position to the initial state
         x = -width;
       } else {
+        // Otherwise, move the carousel items to the next position
         x -= width;
       }
-      // Hide the current item and show the next item
     }
 
-    setInterval(moveToNextItem, 5000); // Call moveToNextItem every 5 seconds
+    // Set an interval to automatically move the carousel items every 5 seconds
+    setInterval(moveToNextItem, MILLIS);
   });
 </script>

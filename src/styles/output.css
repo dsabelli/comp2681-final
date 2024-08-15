@@ -1,20 +1,6 @@
-/*************************************************************************************************************************
-// style.css
-//
-// Daniel Sabelli T00743378
-// Jun. 16, 2024
-// COMP 2681 Assignment 3
-// This stylesheet contains all custom CSS styles. 
-// Since I'm also using Tailwind, these styles are ported 
-// to the output.css file along with the Tailwind specific class names and styles.
-// The output.css file is used as the stylesheet for all pages since it contains 
-// both my custom styles, and Tailwind styles.  
-//*************************************************************************************************************************
-
-
 /* Import Tailwind CSS framework */
 
-/*! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -732,6 +718,40 @@ html {
 
 /* Base styles for typography, colors, etc. */
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .alert {
   display: grid;
   width: 100%;
@@ -785,6 +805,18 @@ html {
     background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
     --tw-text-opacity: 1;
     color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
+  }
+
+  .table tr.hover:hover,
+  .table tr.hover:nth-child(even):hover {
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+  }
+
+  .table-zebra tr.hover:hover,
+  .table-zebra tr.hover:nth-child(even):hover {
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
   }
 }
 
@@ -1399,6 +1431,21 @@ html {
 
 .range:focus {
   outline: none;
+}
+
+.rating {
+  position: relative;
+  display: inline-flex;
+}
+
+.rating :where(input) {
+  cursor: pointer;
+  border-radius: 0px;
+  animation: rating-pop var(--animation-input, 0.25s) ease-out;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
+  --tw-bg-opacity: 1;
 }
 
 .select {
@@ -2018,6 +2065,39 @@ html {
       calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size);
 }
 
+.rating input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+}
+
+.rating .rating-hidden {
+  width: 0.5rem;
+  background-color: transparent;
+}
+
+.rating input[type="radio"]:checked {
+  background-image: none;
+}
+
+.rating input:checked ~ input,
+  .rating input[aria-checked="true"] ~ input {
+  --tw-bg-opacity: 0.2;
+}
+
+.rating input:focus-visible {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transform: translateY(-0.125em);
+}
+
+.rating input:active:focus {
+  animation: none;
+  transform: translateY(-0.125em);
+}
+
 @keyframes rating-pop {
   0% {
     transform: translateY(-0.125em);
@@ -2136,6 +2216,42 @@ html {
 
 .artboard.phone {
   width: 320px;
+}
+
+.artboard.phone-1.horizontal,
+      .artboard.phone-1.artboard-horizontal {
+  width: 568px;
+  height: 320px;
+}
+
+.artboard.phone-2.horizontal,
+      .artboard.phone-2.artboard-horizontal {
+  width: 667px;
+  height: 375px;
+}
+
+.artboard.phone-3.horizontal,
+      .artboard.phone-3.artboard-horizontal {
+  width: 736px;
+  height: 414px;
+}
+
+.artboard.phone-4.horizontal,
+      .artboard.phone-4.artboard-horizontal {
+  width: 812px;
+  height: 375px;
+}
+
+.artboard.phone-5.horizontal,
+      .artboard.phone-5.artboard-horizontal {
+  width: 896px;
+  height: 414px;
+}
+
+.artboard.phone-6.horizontal,
+      .artboard.phone-6.artboard-horizontal {
+  width: 1024px;
+  height: 320px;
 }
 
 .btn-sm {
@@ -2318,20 +2434,16 @@ html {
   position: relative;
 }
 
+.left-4 {
+  left: 1rem;
+}
+
 .right-2 {
   right: 0.5rem;
 }
 
 .top-2 {
   top: 0.5rem;
-}
-
-.left-4 {
-  left: 1rem;
-}
-
-.left-8 {
-  left: 2rem;
 }
 
 .z-\[1\] {
@@ -2352,19 +2464,14 @@ html {
   margin-bottom: 3rem;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.\!mx-auto {
-  margin-left: auto !important;
-  margin-right: auto !important;
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mb-12 {
@@ -2397,10 +2504,6 @@ html {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.ml-12 {
-  margin-left: 3rem;
 }
 
 .block {
@@ -2557,16 +2660,16 @@ html {
   gap: 2rem;
 }
 
-.self-start {
-  align-self: flex-start;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
 
 .text-nowrap {
   text-wrap: nowrap;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-box {
@@ -2684,10 +2787,6 @@ html {
 
 .pr-8 {
   padding-right: 2rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
 }
 
 .text-left {
@@ -2854,35 +2953,59 @@ html,
   /* Error colour */
 }
 
+/* Style for level 1 headings (.h1) */
+
 .h1 {
+  /* Sets the font size to 2.5rem */
   font-size: 2.5rem;
+  /* Sets the font weight to bold (700) */
   font-weight: 700;
+  /* Adds top and bottom margins of 1.5rem */
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
+/* Style for card headers (.card-header) */
+
 .card-header {
+  /* Sets the font size to 2rem */
   font-size: 2rem;
+  /* Adds a bottom margin of 1rem */
   margin-bottom: 1rem;
 }
 
+/* General style for paragraphs (p) */
+
 p {
+  /* Sets the font size to 1.2rem */
   font-size: 1.2rem;
 }
 
+/* Specific style for anchor tags within list items of menus and dropdowns */
+
 .menu > li > a,
 .dropdown > li > div > a {
+  /* Sets the font size to 1.2rem, overriding any other conflicting styles */
   font-size: 1.2rem !important;
 }
 
+/* Media query for screens with a minimum width of 768px */
+
 @media screen and (min-width: 768px) {
+  /* Enhanced style for level 1 headings (.h1) on larger screens */
+
   .h1 {
+    /* Increases the font size to 4rem */
     font-size: 4rem;
+    /* Adjusts the top and bottom margins to 2rem */
     margin: 2rem 0;
   }
 
+  /* Enhanced style for anchor tags within list items of menus and dropdowns on larger screens */
+
   .menu > li > a,
   .dropdown > li > div > a {
+    /* Increases the font size to 1.5rem, overriding any other conflicting styles */
     font-size: 1.5rem !important;
   }
 }
@@ -3038,11 +3161,6 @@ p {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   .md\:text-6xl {

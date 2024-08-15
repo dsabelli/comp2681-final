@@ -1,3 +1,4 @@
+<!-- Style definitions for labels within forms -->
 <style>
   label {
     margin: 0.75rem 0 0.25rem 0;
@@ -5,14 +6,14 @@
   }
 </style>
 
+<!-- Contact form with a specific background color, flexbox layout, padding, and rounded corners -->
 <form
   class="bg-base-300 flex flex-col w-full px-8 py-8 rounded-xl"
   name="contact-form"
   id="contact-form"
   method="post"
 >
-  <!-- Form fields for user input -->
-  <!-- service select dropdown -->
+  <!-- Dropdown selection for choosing a service, with required attribute -->
   <label class="required" for="service">Service:</label>
   <select
     class="select text-lg border-2 w-full max-w-xl min-w-64 md:min-w-80"
@@ -21,6 +22,7 @@
     required
   >
     <option value="" selected disabled hidden>Select an option</option>
+    <!-- Options for various services -->
     <option value="pad">Concrete pads</option>
     <option value="driveway">Driveways</option>
     <option value="walkway">Walkways</option>
@@ -30,8 +32,10 @@
     <option value="cutting">Concrete cutting</option>
     <option value="sealing">Concrete sealing</option>
     <option value="maintenance">Maintenance</option>
-    <!-- Other options -->
+    <!-- Additional options can be added here -->
   </select>
+
+  <!-- Input field for the user's first name, with required attribute -->
   <label class="required" for="firstName">First Name:</label>
   <input
     class="input text-lg input-bordered border-2 w-full max-w-xl min-w-64 md:min-w-80 valid:input-success"
@@ -42,6 +46,8 @@
     title="Please enter your first name."
     placeholder=" "
   />
+
+  <!-- Input field for the user's last name -->
   <label class="required" for="lastName">Last Name:</label>
   <input
     class="input text-lg input-bordered border-2 w-full max-w-xl min-w-64 md:min-w-80"
@@ -52,6 +58,8 @@
     title="Please enter your last name."
     placeholder=" "
   />
+
+  <!-- Input field for the user's address, with required attribute -->
   <label class="required" for="address">Address:</label>
   <input
     class="input text-lg input-bordered border-2 w-full max-w-xl min-w-64 md:min-w-80"
@@ -63,6 +71,7 @@
     placeholder=" "
   />
 
+  <!-- Input field for the user's phone number, with required attribute and pattern for validation -->
   <label class="required" for="phone">Phone Number:</label>
   <input
     class="input text-lg input-bordered border-2 w-full max-w-xl min-w-64 md:min-w-80"
@@ -74,16 +83,21 @@
     placeholder=" "
     pattern="^\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}|\(?[0-9]{3}\)?\s?[0-9]{3}-?[0-9]{4}$"
   />
-  <!-- Pattern for phone number validation -->
-
-  <!--Message text area -->
+  <!-- Validation is for the following formats:
+(555) 555-5555
+(555)-555-5555 
+ 555 555-5555
+ 5555555555
+-->
+  <!-- Textarea for the user's message -->
   <label for="message">Message:</label>
   <textarea
     class="textarea textarea-bordered w-full max-w-xl min-w-64 md:min-w-80"
     id="message"
     name="message"
   ></textarea>
-  <!-- Form submission and reset buttons -->
+
+  <!-- Submit button for the form -->
   <div class="w-full flex justify-center my-8">
     <button
       class="btn btn-lg btn-primary w-3/4"

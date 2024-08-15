@@ -1,16 +1,23 @@
+<!-- Hero section with a background image, covering at least 95% of the viewport height -->
 <div
   class="hero"
   style="background-image: url(../../images/hero.jpg); min-height: 95vh"
 >
+  <!-- Overlay div with semi-transparent background to enhance readability over the background image -->
   <div class="hero-overlay bg-opacity-70"></div>
+  <!-- Content container for the hero section, centered and with neutral text color -->
   <div class="hero-content text-center text-neutral-content">
+    <!-- Max-width container for the content, ensuring responsiveness -->
     <div class="max-w-md">
+      <!-- Heading slot for dynamic insertion of a title -->
       <h1 class="mb-5 text-5xl md:text-6xl font-bold">
         <slot name="heading"></slot>
       </h1>
+      <!-- Paragraph slot for dynamic insertion of a subtitle or brief description -->
       <p class="mb-8 text-xl md:text-2xl">
         <slot name="p"></slot>
       </p>
+      <!-- Button slot for dynamic insertion of a call-to-action button -->
       <button>
         <slot name="btn"></slot>
       </button>

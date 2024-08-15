@@ -12,23 +12,28 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
-    <title>Country Rock Concrete</title>
+    <title>Country Rock Concrete | Contact</title>
   </head>
   <!-- Body section contains the main content of the webpage -->
   <body>
     <app-navbar></app-navbar>
     <!-- Navigation bar with links to different pages -->
 
-    <!-- Main content area with hero section and personal introduction -->
+    <!-- Main content area that uses Flexbox for layout, starting with a hero section and personal introduction -->
     <main class="w-full flex flex-col justify-start items-center md:mb-24">
+      <!-- Heading for the contact page -->
       <h1 class="h1">Contact us</h1>
+      <!-- A container div that adjusts its layout based on screen size, centering content on smaller screens and aligning to the sides on medium and larger screens -->
       <div
         class="w-full flex flex-col py-8 md:gap-12 md:flex-row justify-around"
       >
+        <!-- Aside section for information and details, adjusting width and alignment based on screen size -->
         <aside
           class="w-full p-4 md:w-1/2 flex flex-col items-center md:items-end"
         >
+          <!-- Nested container for content, adjusting gaps between items based on screen size -->
           <div class="w-full max-w-xs flex flex-col gap-4 md:gap-12">
+            <!-- Introduction section with a title and description -->
             <div>
               <h2 class="text-3xl mb-4">
                 Ready to transform your outdoor space?
@@ -41,6 +46,7 @@
                 bring your vision to life.
               </p>
             </div>
+            <!-- Section listing the areas served, with a title and unordered list -->
             <div>
               <h2 id="areas-served" class="text-3xl mb-4">Areas we serve:</h2>
               <ul class="w-full max-w-xs text-lg">
@@ -52,19 +58,22 @@
             </div>
           </div>
         </aside>
+        <!-- Section for the contact form, adjusting width and alignment based on screen size -->
         <section
           class="w-full md:w-1/2 flex justify-center md:justify-start items-center"
         >
+          <!-- Custom form component, presumably defined elsewhere in the application -->
           <app-form></app-form>
         </section>
       </div>
     </main>
+
     <!-- Footer section with social media icons and email link -->
     <app-footer></app-footer>
   </body>
 </html>
 <style>
   ul li {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Change font size of list items */
   }
 </style>

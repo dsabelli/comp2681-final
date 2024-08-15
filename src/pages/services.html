@@ -9,17 +9,20 @@
     <script src="../scripts/cardLeft.js" defer></script>
     <script src="../scripts/cardRight.js" defer></script>
     <script src="../scripts/footer.js" defer></script>
-    <title>Country Rock Concrete</title>
+    <title>Country Rock Concrete | Services</title>
   </head>
   <!-- Body section contains the main content of the webpage -->
   <body>
-    <app-navbar></app-navbar>
     <!-- Navigation bar with links to different pages -->
+    <app-navbar></app-navbar>
 
-    <!-- Main content area with hero section and personal introduction -->
+    <!-- Main content area for showcasing services -->
     <main>
+      <!-- Container div for introductory content, centered and padded -->
       <div class="w-full px-8 pb-12 mx-auto">
-        <h1 class="h1 max-w-7xl !mx-auto text-center">Services</h1>
+        <!-- Hero heading for the Services page -->
+        <h1 class="h1 max-w-7xl!mx-auto text-center">Services</h1>
+        <!-- Introductory paragraph about the company's services -->
         <p class="text-lg max-w-7xl mx-auto">
           Are you looking to enhance your property with durable and stylish
           concrete? Country Rock Concrete specializes in creating custom
@@ -31,9 +34,12 @@
           quality concrete can make.
         </p>
       </div>
+      <!-- Service card -->
       <div class="bg-base-300">
-        <app-card-left
-          ><span slot="img"><img src="../../images/pad-2.jpg" /></span>
+        <app-card-left>
+          <!-- Image slot for the service image -->
+          <span slot="img"><img src="../../images/pad-2.jpg" /></span>
+          <!-- Content slot for the service description and call-to-action button -->
           <span slot="content">
             <h2 class="card-header" id="service-1" class="card-title mb-4">
               Concrete pads
@@ -236,16 +242,31 @@
   </body>
 </html>
 <script>
+  // Extract the fragment identifier (the part after '#') from the URL
   const elementId = document.URL.split("#")[1];
+  // Interval in milliseconds
+  const MILLIS = 500;
+  // Function to navigate to a specific element on the page
   function navigateToTarget() {
-    // Simulate an asynchronous operation
+    // Simulate an asynchronous operation, such as fetching data or waiting for a condition to be met
     setTimeout(() => {
+      // Attempt to find the element by its ID
       const element = document.getElementById(elementId);
+
+      // Check if the element exists
       if (element) {
-        element.style.display = "block"; // Make sure the element is visible
-        element.scrollIntoView({ behavior: "smooth", block: "start" }); // Smoothly scroll to the element
+        // Make the element visible if it was previously hidden
+        element.style.display = "block";
+
+        // Smoothly scroll the page so the element is in view
+        element.scrollIntoView({
+          behavior: "smooth", // Animation type
+          block: "start", // Alignment of the element in the viewport
+        });
       }
-    }, 500); // Adjust timeout as needed based on your asynchronous operation
+    }, MILLIS); // Wait 500 milliseconds before executing the code inside the setTimeout function
   }
+
+  // Call the navigateToTarget function if an element ID was found in the URL
   if (elementId) navigateToTarget();
 </script>

@@ -1,15 +1,21 @@
+<!-- Style definition for paragraph font size within navigation elements -->
 <style>
   nav p {
     font-size: 1rem;
   }
 </style>
+<!-- Footer section with a full-width background, centered content, and flexbox layout -->
 <footer class="bg-base-200 w-full flex justify-center">
+  <!-- Main container for footer content, using flexbox for layout, evenly spaced items, start alignment, padding, and full width with a maximum width constraint -->
   <div
     class="flex flex-col md:flex-row justify-evenly items-start gap-8 text-base-content p-10 w-full max-w-7xl"
   >
+    <!-- Aside element reserved for logo placement, identified by an ID for potential scripting or styling -->
     <aside id="logo-footer"></aside>
+    <!-- Navigation section for helpful links, using flexbox for column layout -->
     <nav class="flex flex-col">
       <h6 class="footer-title">Helpful Links</h6>
+      <!-- List of links to main pages, styled with hover effects and accent coloring -->
       <a href="../pages/about.html" class="link link-hover link-accent"
         >About us</a
       >
@@ -26,6 +32,7 @@
         >Free Quote</a
       >
     </nav>
+    <!-- List of areas served, styled with hover effects and accent coloring -->
     <nav class="flex flex-col">
       <h6 class="footer-title">Areas Served</h6>
       <a href="../pages/contact.html" class="link link-hover link-accent"
@@ -41,6 +48,7 @@
         >Kent county</a
       >
     </nav>
+    <!-- List of links to services, styled with hover effects and accent coloring -->
     <nav class="flex flex-col">
       <h6 class="footer-title">Services</h6>
       <a
@@ -89,6 +97,7 @@
         >Maintenance</a
       >
     </nav>
+    <!-- Business Information navigation section, including contact details and operating hours -->
     <nav class="flex flex-col">
       <h6 class="footer-title">Business Information</h6>
       <p class="font-bold mb-2">Country Rock Concrete</p>

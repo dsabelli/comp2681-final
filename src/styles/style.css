@@ -1,17 +1,3 @@
-/*************************************************************************************************************************
-// style.css
-//
-// Daniel Sabelli T00743378
-// Jun. 16, 2024
-// COMP 2681 Assignment 3
-// This stylesheet contains all custom CSS styles. 
-// Since I'm also using Tailwind, these styles are ported 
-// to the output.css file along with the Tailwind specific class names and styles.
-// The output.css file is used as the stylesheet for all pages since it contains 
-// both my custom styles, and Tailwind styles.  
-//*************************************************************************************************************************
-
-
 /* Import Tailwind CSS framework */
 @tailwind base; /* Base styles for typography, colors, etc. */
 @tailwind components; /* Component classes like buttons, forms, etc. */
@@ -46,32 +32,51 @@ html,
   --error-color: #b22222; /* Error colour */
   --error-color-dark: #a11e1e; /* Error colour */
 }
+/* Style for level 1 headings (.h1) */
 .h1 {
+  /* Sets the font size to 2.5rem */
   font-size: 2.5rem;
+  /* Sets the font weight to bold (700) */
   font-weight: 700;
+  /* Adds top and bottom margins of 1.5rem */
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+
+/* Style for card headers (.card-header) */
 .card-header {
+  /* Sets the font size to 2rem */
   font-size: 2rem;
+  /* Adds a bottom margin of 1rem */
   margin-bottom: 1rem;
 }
 
+/* General style for paragraphs (p) */
 p {
+  /* Sets the font size to 1.2rem */
   font-size: 1.2rem;
 }
 
+/* Specific style for anchor tags within list items of menus and dropdowns */
 .menu > li > a,
 .dropdown > li > div > a {
+  /* Sets the font size to 1.2rem, overriding any other conflicting styles */
   font-size: 1.2rem !important;
 }
+
+/* Media query for screens with a minimum width of 768px */
 @media screen and (min-width: 768px) {
+  /* Enhanced style for level 1 headings (.h1) on larger screens */
   .h1 {
+    /* Increases the font size to 4rem */
     font-size: 4rem;
+    /* Adjusts the top and bottom margins to 2rem */
     margin: 2rem 0;
   }
+  /* Enhanced style for anchor tags within list items of menus and dropdowns on larger screens */
   .menu > li > a,
   .dropdown > li > div > a {
+    /* Increases the font size to 1.5rem, overriding any other conflicting styles */
     font-size: 1.5rem !important;
   }
 }
