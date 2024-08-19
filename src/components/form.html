@@ -4,6 +4,11 @@
     margin: 0.75rem 0 0.25rem 0;
     font-size: 1.2rem;
   }
+  h1 {
+    background-image: url(../../images/about-us.jpg);
+    background-clip: text;
+    color: transparent;
+  }
 </style>
 
 <!-- Contact form with a specific background color, flexbox layout, padding, and rounded corners -->
@@ -68,6 +73,17 @@
     name="address"
     required
     title="Please enter your address."
+    placeholder=" "
+  />
+
+  <label class="required" for="email">Email:</label>
+  <input
+    class="input text-lg input-bordered border-2 w-full max-w-xl min-w-64 md:min-w-80"
+    type="email"
+    id="email"
+    name="email"
+    required
+    title="Please enter your email."
     placeholder=" "
   />
 

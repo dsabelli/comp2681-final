@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head section contains meta tags, link to stylesheet, and the title of the webpage -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/output.css" />
+    <link rel="icon" href="../../icons/logo.png" type="image/x-icon" />
+    <script src="../scripts/navbar.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
+    <title>Page not found</title>
+  </head>
+  <!-- Body section contains the main content of the webpage -->
+  <body>
+    <!-- Navigation bar with links to different pages -->
+    <app-navbar></app-navbar>
+
+    <!-- Main content area that spans the full width of its parent -->
+    <main class="w-full">
+      <!-- Container div that centers itself and has a maximum width for larger screens, padding at the bottom and margins -->
+      <div class="w-full lg:max-w-7xl mx-auto pb-8 mb-8">
+        <!-- Centered heading for the page -->
+        <h1 class="text-center h1">That page could not be found</h1>
+        <!-- Div containing the main content text -->
+        <div class="mx-auto p-8">
+          <p>
+            Sorry, we couldn't find that page, but here are some links that
+            might help:
+          </p>
+          <a href="../pages/index.html" class="link link-hover link-accent"
+            >Homepage</a
+          >
+          <a href="../pages/services.html" class="link link-hover link-accent"
+            >Services</a
+          >
+          <a href="../pages/contact.html" class="link link-hover link-accent"
+            >Contact us</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer section with social media icons and email link -->
+    <app-footer></app-footer>
+  </body>
+</html>

@@ -42,16 +42,15 @@
         </span>
       </app-hero>
       <!-- A spacer div for visual separation, with a specific background color -->
-      <div class="w-full h-12 bg-base-200"></div>
+      <div id="cards" class="w-full h-12 bg-base-200"></div>
       <!-- Card component for showcasing a service offering -->
-      <div class="bg-base-300">
+      <div id="drop-cap" class="bg-base-300">
         <app-card-left>
           <!-- Slot for the service image, with an image source -->
           <span slot="img"><img src="../../images/maintenance-1.jpg" /></span>
           <!-- Slot for the service content, including a title and description -->
           <span slot="content">
-            <h2 class="card-header mb-4">Transform your space!</h2>
-            <p>
+            <p class="drop-cap-content">
               Is your driveway, patio, or walkway showing signs of wear and
               tear? Don't let cracked, stained, or uneven concrete detract from
               your property's value. Country Rock Concrete specializes in
@@ -59,7 +58,7 @@
               We offer a wide range of services including installation,
               resurfacing and maintenance to cater to residential clients. Our
               experienced team is committed to delivering exceptional results
-              and exceeding your expectations.
+              and exceeding your&nbsp;expectations.
             </p>
           </span>
         </app-card-left>
@@ -68,19 +67,20 @@
         <app-card-right
           ><span slot="img"><img src="../../images/driveway-5.jpg" /></span>
           <span slot="content">
-            <h2 class="card-header mb-4">Need more options?</h2>
-            <p>
+            <p class="drop-cap-content">
               Would you like to focus on a specific service, such as driveway
               installation or pool deck maintenance? Or perhaps you'd like to
               highlight a particular benefit, like increasing property value or
               enhancing curb appeal? Let us know your preferences and we can
-              suit your needs accordingly.
+              suit your needs&nbsp;accordingly.
             </p>
           </span></app-card-right
         >
       </div>
       <!-- Title for the Testimonials section, with responsive font sizing and center alignment -->
-      <h2 class="text-5xl md:text-6xl text-center mt-12">Testimonials</h2>
+      <h2 id="testimonials" class="text-5xl md:text-6xl text-center mt-12">
+        Testimonials
+      </h2>
       <!-- Carousel container for testimonials, with full width, spaced items, maximum width, rounded corners, overflow control, padding, margin, and auto centering -->
       <div
         id="myCarousel"
@@ -240,7 +240,9 @@
         </div>
       </div>
       <!-- Title for the Services section, with responsive font sizing and center alignment -->
-      <h2 class="text-5xl md:text-6xl text-center mt-12">Services</h2>
+      <h2 id="services" class="text-5xl md:text-6xl text-center mt-12">
+        Services
+      </h2>
       <!-- Container div for the services grid, with full width, vertical margins, centered content, background color, and flexbox properties for layout -->
       <div class="w-full my-12 flex justify-center bg-base-100">
         <!-- Grid container for organizing tiles, with specified gap and responsive column and row configuration -->
@@ -248,7 +250,9 @@
           <!-- Tile component for showcasing a service, with a background image -->
           <app-tile bg-url="../../images/pad-1.jpg">
             <!-- Slot for the tile heading -->
-            <span slot="heading">Concrete pads</span>
+            <span slot="heading">
+              <h3>Concrete pads</h3>
+            </span>
             <!-- Slot for the tile description -->
             <span slot="p">
               Need a solid base for your shed, RV, or outdoor equipment? Our
@@ -264,7 +268,7 @@
             </span>
           </app-tile>
           <app-tile bg-url="../../images/driveway-2.jpg"
-            ><span slot="heading">Driveways</span
+            ><span slot="heading"> <h3>Driveways</h3> </span
             ><span slot="p"
               >We can create a stunning and durable driveway that complements
               your property's&nbsp;style.</span
@@ -278,7 +282,7 @@
             ></app-tile
           >
           <app-tile bg-url="../../images/walkway-3.jpg"
-            ><span slot="heading">Walkways</span
+            ><span slot="heading"> <h3>Walkways</h3> </span
             ><span slot="p"
               >Transform your outdoor space with elegant and
               functional&nbsp;walkways.</span
@@ -292,7 +296,7 @@
             ></app-tile
           >
           <app-tile bg-url="../../images/patio-2.jpg"
-            ><span slot="heading">Patios</span
+            ><span slot="heading"> <h3>Patios</h3> </span
             ><span slot="p"
               >Create an outdoor oasis with a beautiful
               concrete&nbsp;patio.</span
@@ -306,7 +310,7 @@
             ></app-tile
           >
           <app-tile bg-url="../../images/pool-deck-2.jpg"
-            ><span slot="heading">Pool decks</span
+            ><span slot="heading"> <h3>Pool decks</h3> </span
             ><span slot="p"
               >Enhance your pool area with a stylish and safe concrete
               pool&nbsp;deck.</span
@@ -320,7 +324,7 @@
             ></app-tile
           >
           <app-tile bg-url="../../images/foundation-1.jpg"
-            ><span slot="heading">Foundations</span
+            ><span slot="heading"> <h3>Foundations</h3> </span
             ><span slot="p"
               >A strong foundation is essential for any&nbsp;structure.</span
             >
@@ -333,7 +337,7 @@
             ></app-tile
           >
           <app-tile bg-url="../../images/cutting-1.jpg"
-            ><span slot="heading">Concrete cutting</span
+            ><span slot="heading"> <h3>Concrete cutting</h3> </span
             ><span slot="p"
               >Need to make precise cuts in your&nbsp;concrete?</span
             >
@@ -346,7 +350,7 @@
             ></app-tile
           >
           <app-tile bg-url="../../images/sealing-1.jpg"
-            ><span slot="heading">Concrete sealing</span
+            ><span slot="heading"> <h3>Concrete sealing</h3> </span
             ><span slot="p"
               >Protect your concrete investment with our professional
               sealing&nbsp;services.</span
@@ -360,7 +364,7 @@
             ></app-tile
           >
           <app-tile bg-url="../../images/maintenance-1.jpg"
-            ><span slot="heading">Maintenance</span
+            ><span slot="heading"> <h3>Maintenance</h3> </span
             ><span slot="p"
               >Keep your concrete looking its best and extending its lifespan
               with our expert maintenance&nbsp;services.</span
@@ -377,58 +381,11 @@
       </div>
     </main>
     <!-- Footer section with social media icons and email link -->
-    <app-footer></app-footer>
+    <app-footer id="footer"></app-footer>
   </body>
 </html>
 
-<style>
-  #myCarousel {
-    max-width: 500px;
-  }
-  .carousel-item {
-    width: 100%;
-    max-width: 468px;
-    transition: transform 1s ease-in-out; /* Smooth transition effect */
-  }
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
-    #myCarousel {
-      max-width: 600px;
-    }
-    .carousel-item {
-      max-width: 568px;
-    }
-  }
-
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 768px) {
-    #myCarousel {
-      max-width: 800px;
-    }
-    .carousel-item {
-      max-width: 768px;
-    }
-  }
-
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 1024px) {
-    #myCarousel {
-      max-width: 1024px;
-    }
-    .carousel-item {
-      max-width: 968px;
-    }
-  }
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 1280px) {
-    #myCarousel {
-      max-width: 1280px;
-    }
-    .carousel-item {
-      max-width: 384px;
-    }
-  }
-</style>
+<style></style>
 
 <script>
   // Wait until the DOM is fully loaded

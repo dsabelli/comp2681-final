@@ -21,6 +21,9 @@
         const shadowRoot = this.attachShadow({ mode: "open" });
         shadowRoot.adoptedStyleSheets = [styleSheet];
         shadowRoot.appendChild(template.content.cloneNode(true));
+
+        // Slow down playrate of video
+        shadowRoot.getElementById("heroVideo").playbackRate = 0.75;
       }
     }
     // Define the custom element

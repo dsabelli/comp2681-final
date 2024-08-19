@@ -33,7 +33,7 @@
           class="w-full p-4 md:w-1/2 flex flex-col items-center md:items-end"
         >
           <!-- Nested container for content, adjusting gaps between items based on screen size -->
-          <div class="w-full max-w-xs flex flex-col gap-4 md:gap-12">
+          <div class="w-full max-w-md flex flex-col gap-4 md:gap-12">
             <!-- Introduction section with a title and description -->
             <div>
               <h2 class="text-3xl mb-4">
@@ -50,12 +50,40 @@
             <!-- Section listing the areas served, with a title and unordered list -->
             <div>
               <h2 id="areas-served" class="text-3xl mb-4">Areas we serve:</h2>
-              <ul class="w-full max-w-xs text-lg">
-                <li>Elgin county</li>
-                <li>Middlesex county</li>
-                <li>Norfolk county</li>
-                <li>Kent county</li>
-              </ul>
+              <div class="overflow-x-auto">
+                <table id="areas-table" class="table table-sm table-zebra">
+                  <tr>
+                    <th>Elgin</th>
+                    <th>Middlesex</th>
+                    <th>Norfolk</th>
+                    <th>Kent</th>
+                  </tr>
+                  <tr>
+                    <td>Aylmer</td>
+                    <td>Glencoe</td>
+                    <td>Charlotteville</td>
+                    <td>Chatham</td>
+                  </tr>
+                  <tr>
+                    <td>Bayham</td>
+                    <td>London</td>
+                    <td>Windham</td>
+                    <td>Dover</td>
+                  </tr>
+                  <tr>
+                    <td>Dutton</td>
+                    <td>Ilderton</td>
+                    <td>Walpole</td>
+                    <td>Rodney</td>
+                  </tr>
+                  <tr>
+                    <td>Malahide</td>
+                    <td>Strathroy</td>
+                    <td>Woodhouse</td>
+                    <td>Tilbury</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
         </aside>

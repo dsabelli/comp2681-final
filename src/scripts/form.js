@@ -38,11 +38,10 @@
         const inputs = shadowRoot.querySelectorAll(".input,select");
         inputs.forEach((input) => {
           input.addEventListener("blur", function (event) {
-            // Your validation logic here
             const value = event.target.value.trim(); // Get the trimmed value of the input
 
+            // Check if valid input
             if (event.target.checkValidity()) {
-              // Assuming minimum length requirement is 1
               event.target.classList.remove("input-error"); // Remove error state
               event.target.classList.add("input-success"); // Add success state
             } else {
@@ -52,7 +51,7 @@
           });
         });
 
-        // Existing submit event listener
+        // Add event listener to submit email using emailjs template
         shadowRoot
           .querySelector("#contact-form")
           .addEventListener("submit", function (event) {
