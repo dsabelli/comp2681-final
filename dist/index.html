@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head section contains meta tags, link to stylesheet, and the title of the webpage -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="icon" href="../../icons/logo.png" type="image/x-icon" />
+    <title>Country Rock Concrete</title>
+    <script type="module" crossorigin src="/assets/main-BUQUGjph.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/footer-Ba2HiwSp.js">
+    <link rel="modulepreload" crossorigin href="/assets/cardRight-lq-IiPZT.js">
+  </head>
+  <!-- Body section contains the main content of the webpage -->
+  <body>
+    <app-navbar></app-navbar>
+    <!-- Navigation bar with links to different pages -->
+
+    <!-- Main content area with hero section and personal introduction -->
+    <main>
+      <!-- Custom hero component for the website header -->
+      <app-hero>
+        <!-- Slot for the hero heading, with nested span for styling -->
+        <span slot="heading">
+          Country Rock
+          <!-- Larger font size on medium and larger screens -->
+          <span class="text-7xl md:text-8xl">Concrete</span>
+        </span>
+        <!-- Slot for the hero paragraph, emphasizing the company's focus -->
+        <span style="font-weight: 700" slot="p">
+          Quality concrete solutions for your&nbsp;home
+        </span>
+        <!-- Slot for the hero button, linking to the services page -->
+        <span slot="btn">
+          <a class="btn btn-lg btn-primary" href="./services.html"
+            >Learn more</a
+          >
+        </span>
+      </app-hero>
+      <!-- A spacer div for visual separation, with a specific background color -->
+      <div id="cards" class="w-full h-12 bg-base-200"></div>
+      <!-- Card component for showcasing a service offering -->
+      <div id="drop-cap" class="bg-base-300">
+        <app-card-left>
+          <!-- Slot for the service image, with an image source -->
+          <span slot="img"><img src="../../images/maintenance-1.jpg" /></span>
+          <!-- Slot for the service content, including a title and description -->
+          <span slot="content">
+            <p class="drop-cap-content">
+              Is your driveway, patio, or walkway showing signs of wear and
+              tear? Don't let cracked, stained, or uneven concrete detract from
+              your property's value. Country Rock Concrete specializes in
+              transforming worn-out concrete into beautiful, durable surfaces.
+              We offer a wide range of services including installation,
+              resurfacing and maintenance to cater to residential clients. Our
+              experienced team is committed to delivering exceptional results
+              and exceeding your&nbsp;expectations.
+            </p>
+          </span>
+        </app-card-left>
+      </div>
+      <div class="bg-base-100">
+        <app-card-right
+          ><span slot="img"><img src="../../images/driveway-5.jpg" /></span>
+          <span slot="content">
+            <p class="drop-cap-content">
+              Would you like to focus on a specific service, such as driveway
+              installation or pool deck maintenance? Or perhaps you'd like to
+              highlight a particular benefit, like increasing property value or
+              enhancing curb appeal? Let us know your preferences and we can
+              suit your needs&nbsp;accordingly.
+            </p>
+          </span></app-card-right
+        >
+      </div>
+      <!-- Title for the Testimonials section, with responsive font sizing and center alignment -->
+      <h2 id="testimonials" class="text-5xl md:text-6xl text-center mt-12">
+        Testimonials
+      </h2>
+      <!-- Carousel container for testimonials, with full width, spaced items, maximum width, rounded corners, overflow control, padding, margin, and auto centering -->
+      <div
+        id="myCarousel"
+        class="w-full flex justify-between gap-8 max-w-7xl bg-base-200 rounded-box overflow-hidden p-8 my-12 mx-auto"
+      >
+        <!-- Individual carousel item for each testimonial -->
+        <div class="carousel-item">
+          <!-- Custom review card component for displaying testimonials -->
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=S"
+          >
+            <span slot="name">Scott Sheridan</span>
+            <span slot="date">08-11-2023</span>
+            <span slot="review">
+              We are very happy with Scott and his guy's; they did a fantastic
+              job, and we are very happy with the work done. He did exactly what
+              we discussed and helped to offer suggestions. We appreciate the
+              amazing communication, he always followed up and kept us posted on
+              the scheduled&nbsp;work...</span
+            >
+          </app-review-card>
+        </div>
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=D"
+          >
+            <span slot="name">Denise Cooke</span>
+            <span slot="date">05-21-2023</span>
+            <span slot="review"
+              >Scott and his crew did a fantastic job pouring our concrete
+              patio. Scott helped us with our colour and pattern selection and
+              was available throughput the process to answer any questions. We
+              couldn't be happier with the end&nbsp;result.</span
+            >
+          </app-review-card>
+        </div>
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=J"
+          >
+            <span slot="name">Jason Laidlaw</span>
+            <span slot="date">06-01-2022</span>
+            <span slot="review"
+              >We had Scott pour a two tiered stamped patio in our backyard two
+              years ago. All I can say is WOW! The patio turned out exactly as
+              we wanted, colour & pattern were perfect! Two years later…no
+              cracks, no shifts & colour looks like it did day one. Scott & his
+              crew are&nbsp;professional...</span
+            >
+          </app-review-card>
+        </div>
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=J"
+          >
+            <span slot="name">Jonathan Hoist</span>
+            <span slot="date">09-05-2023</span>
+            <span slot="review"
+              >Our entire backyard was in need of a complete overhaul! An over
+              grown garden with wonky interlock was removed, re-graded and
+              replaced with stamped concrete. Scott and his crew Chris and Wes
+              were extremely knowledgeable and professional. They could see our
+              vision and were a pleasure to deal with from
+              the&nbsp;start...</span
+            >
+          </app-review-card>
+        </div>
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=M"
+          >
+            <span slot="name">Martin Hollingsworth</span>
+            <span slot="date">10-03-2022</span>
+            <span slot="review"
+              >Absolutely amazing to deal with. Came recommended by a friend and
+              definitely glad they did. Very impressed with
+              their&nbsp;work.</span
+            >
+          </app-review-card>
+        </div>
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=W"
+          >
+            <span slot="name">WK Drader</span>
+            <span slot="date">08-19-2022</span>
+            <span slot="review">
+              Scott is an extremely hard working and reliable worker. Came in on
+              time and price. Patio looks great and will post pics in the spring
+              when the snow fades. Thanks again for your professionalism
+              and&nbsp;punctuality!</span
+            >
+          </app-review-card>
+        </div>
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=M"
+          >
+            <span slot="name">Mark Burgess</span>
+            <span slot="date">08-19-2022</span>
+            <span slot="review"
+              >Absolutely First Class professionalism, workmanship and quality
+              from start to finish. 100%&nbsp;recommend!</span
+            >
+          </app-review-card>
+        </div>
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=M"
+          >
+            <span slot="name">Mike Dale</span>
+            <span slot="date">07-11-2022</span>
+            <span slot="review"
+              >Scott did an amazing job with pouring our back deck pad. Great
+              work and great pricing. Highly&nbsp;recommended.</span
+            >
+          </app-review-card>
+        </div>
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=S"
+          >
+            <span slot="name">Sam Soucie</span>
+            <span slot="date">03-27-2024</span>
+            <span slot="review"
+              >This is an amazing company that does amazing work. The owner is a
+              great guy. Thank&nbsp;you!</span
+            >
+          </app-review-card>
+        </div>
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=C"
+          >
+            <span slot="name">Clay Nagy</span>
+            <span slot="date">06-29-2022</span>
+            <span slot="review"
+              >Contracted Country Rock Concrete to pour a shed pad. 15 x 20. Due
+              to time constraints we had it pumped in. Concrete was cut the next
+              day. Was easy working with the owner.
+              5&nbsp;star&nbsp;service</span
+            >
+          </app-review-card>
+        </div>
+
+        <div class="carousel-item">
+          <app-review-card
+            src-url="https://api.dicebear.com/9.x/initials/svg?seed=M"
+          >
+            <span slot="name">Moe Fadel</span>
+            <span slot="date">05-30-2022</span>
+            <span slot="review"
+              >I am extremely happy with Scott's service and workmanship. I
+              would recommend his services to&nbsp;anyone.</span
+            >
+          </app-review-card>
+        </div>
+      </div>
+      <!-- Title for the Services section, with responsive font sizing and center alignment -->
+      <h2 id="services" class="text-5xl md:text-6xl text-center mt-12">
+        Services
+      </h2>
+      <!-- Container div for the services grid, with full width, vertical margins, centered content, background color, and flexbox properties for layout -->
+      <div class="w-full my-12 flex justify-center bg-base-100">
+        <!-- Grid container for organizing tiles, with specified gap and responsive column and row configuration -->
+        <div id="grid" class="grid gap-8 md:grid-cols-3 md:grid-rows-3">
+          <!-- Tile component for showcasing a service, with a background image -->
+          <app-tile bg-url="../../images/pad-1.jpg">
+            <!-- Slot for the tile heading -->
+            <span slot="heading">
+              <h3>Concrete pads</h3>
+            </span>
+            <!-- Slot for the tile description -->
+            <span slot="p">
+              Need a solid base for your shed, RV, or outdoor equipment? Our
+              concrete pads are built to&nbsp;last.
+            </span>
+            <!-- Slot for the tile button, linking to the services page with a specific service ID -->
+            <span slot="btn">
+              <a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-1"
+                >Learn more</a
+              >
+            </span>
+          </app-tile>
+          <app-tile bg-url="../../images/driveway-2.jpg"
+            ><span slot="heading"> <h3>Driveways</h3> </span
+            ><span slot="p"
+              >We can create a stunning and durable driveway that complements
+              your property's&nbsp;style.</span
+            >
+            <span slot="btn"
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-2"
+                >Learn more</a
+              ></span
+            ></app-tile
+          >
+          <app-tile bg-url="../../images/walkway-3.jpg"
+            ><span slot="heading"> <h3>Walkways</h3> </span
+            ><span slot="p"
+              >Transform your outdoor space with elegant and
+              functional&nbsp;walkways.</span
+            >
+            <span slot="btn"
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-3"
+                >Learn more</a
+              ></span
+            ></app-tile
+          >
+          <app-tile bg-url="../../images/patio-2.jpg"
+            ><span slot="heading"> <h3>Patios</h3> </span
+            ><span slot="p"
+              >Create an outdoor oasis with a beautiful
+              concrete&nbsp;patio.</span
+            >
+            <span slot="btn"
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-4"
+                >Learn more</a
+              ></span
+            ></app-tile
+          >
+          <app-tile bg-url="../../images/pool-deck-2.jpg"
+            ><span slot="heading"> <h3>Pool decks</h3> </span
+            ><span slot="p"
+              >Enhance your pool area with a stylish and safe concrete
+              pool&nbsp;deck.</span
+            >
+            <span slot="btn"
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-5"
+                >Learn more</a
+              ></span
+            ></app-tile
+          >
+          <app-tile bg-url="../../images/foundation-1.jpg"
+            ><span slot="heading"> <h3>Foundations</h3> </span
+            ><span slot="p"
+              >A strong foundation is essential for any&nbsp;structure.</span
+            >
+            <span slot="btn"
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-6"
+                >Learn more</a
+              ></span
+            ></app-tile
+          >
+          <app-tile bg-url="../../images/cutting-1.jpg"
+            ><span slot="heading"> <h3>Concrete cutting</h3> </span
+            ><span slot="p"
+              >Need to make precise cuts in your&nbsp;concrete?</span
+            >
+            <span slot="btn"
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-7"
+                >Learn more</a
+              ></span
+            ></app-tile
+          >
+          <app-tile bg-url="../../images/sealing-1.jpg"
+            ><span slot="heading"> <h3>Concrete sealing</h3> </span
+            ><span slot="p"
+              >Protect your concrete investment with our professional
+              sealing&nbsp;services.</span
+            >
+            <span slot="btn"
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-8"
+                >Learn more</a
+              ></span
+            ></app-tile
+          >
+          <app-tile bg-url="../../images/maintenance-1.jpg"
+            ><span slot="heading"> <h3>Maintenance</h3> </span
+            ><span slot="p"
+              >Keep your concrete looking its best and extending its lifespan
+              with our expert maintenance&nbsp;services.</span
+            >
+            <span slot="btn"
+              ><a
+                class="btn btn-primary text-lg"
+                href="./services.html#service-9"
+                >Learn more</a
+              ></span
+            ></app-tile
+          >
+        </div>
+      </div>
+    </main>
+    <!-- Footer section with social media icons and email link -->
+    <app-footer id="footer"></app-footer>
+  </body>
+</html>
+
+<style></style>
+
+<script>
+  // Wait until the DOM is fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the carousel element by its ID
+    const carousel = document.getElementById("myCarousel");
+    // Convert NodeList of carousel items to an array
+    const items = Array.from(carousel.querySelectorAll(".carousel-item"));
+    // Interval in milliseconds
+    const MILLIS = 5000;
+    // Breakpoint for distinguishing desktop and mobile views
+    const BREAK = 1024;
+    // Number of items to show on desktop screens
+    const DESKTOP = 3;
+    // Number of items to show on mobile screens
+    const MOBILE = 1;
+    // Padding around reviewCards
+    const PADDING = 32;
+    // Calculate the total number of items
+    const len = items.length;
+    // Initial width calculation for each item plus some extra pixels for spacing
+    let width = items[0].offsetWidth + PADDING;
+    // Current window width
+    let screen = window.innerWidth;
+
+    // Starting position for the carousel items
+    let x = -width;
+
+    // Function to move the carousel items
+    function moveToNextItem() {
+      // Apply translation to each item to move them horizontally
+      for (let i = 0; i < len; i++) {
+        items[i].style.transform = `translateX(${x}px)`;
+      }
+
+      // Determine if the carousel should loop back to the beginning
+      // Leaves three reviewCards in view on desktop
+      if ((x * -1) / width > len - (screen >= BREAK ? DESKTOP : MOBILE)) {
+        // Reset the carousel items to their original positions
+        for (let i = 0; i < len; i++) {
+          items[i].style.transform = `translateX(${0}px)`;
+        }
+        // Reset the position to the initial state
+        x = -width;
+      } else {
+        // Otherwise, move the carousel items to the next position
+        x -= width;
+      }
+    }
+
+    // Set an interval to automatically move the carousel items every 5 seconds
+    setInterval(moveToNextItem, MILLIS);
+  });
+  // Extract the fragment identifier (the part after '#') from the URL
+  const elementId = document.URL.split("#")[1];
+  // Interval in milliseconds
+  const MILLIS = 500;
+  // Function to navigate to a specific element on the page
+  function navigateToTarget() {
+    // Simulate an asynchronous operation, such as fetching data or waiting for a condition to be met
+    setTimeout(() => {
+      // Attempt to find the element by its ID
+      const element = document.getElementById(elementId);
+
+      // Check if the element exists
+      if (element) {
+        // Make the element visible if it was previously hidden
+        element.style.display = "block";
+
+        // Smoothly scroll the page so the element is in view
+        element.scrollIntoView({
+          behavior: "smooth", // Animation type
+          block: "start", // Alignment of the element in the viewport
+        });
+      }
+    }, MILLIS); // Wait 500 milliseconds before executing the code inside the setTimeout function
+  }
+
+  // Call the navigateToTarget function if an element ID was found in the URL
+  if (elementId) navigateToTarget();
+</script>

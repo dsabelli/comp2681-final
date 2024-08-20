@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head section contains meta tags, link to stylesheet, and the title of the webpage -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="icon" href="../../icons/logo.png" type="image/x-icon" />
+    <script src="./scripts/navbar.js" type="module"></script>
+    <script src="./scripts/cardLeft.js" type="module"></script>
+    <script src="./scripts/cardRight.js" type="module"></script>
+    <script src="./scripts/footer.js" type="module"></script>
+    <title>Country Rock Concrete | About us</title>
+  </head>
+  <!-- Body section contains the main content of the webpage -->
+  <body>
+    <!-- Navigation bar with links to different pages -->
+    <app-navbar></app-navbar>
+
+    <!-- Main content area that spans the full width of its parent -->
+    <main class="w-full">
+      <!-- Container div that centers itself and has a maximum width for larger screens, padding at the bottom and margins -->
+      <div class="w-full lg:max-w-7xl mx-auto pb-8 mb-8">
+        <!-- Centered heading for the page -->
+        <h1 class="text-center h1">About us</h1>
+        <!-- Image that floats to the left on large screens and is hidden on smaller screens -->
+        <img
+          class="lg:float-left pr-8 max-w-xl mx-auto hidden lg:block"
+          src="../../images/about-us.jpg"
+        />
+        <!-- Image that takes up the full width on small screens and is hidden on larger screens -->
+        <img class="w-full lg:hidden" src="../../images/about-us-mobile.jpg" />
+        <!-- Div containing the main content text -->
+        <div class="mx-auto p-8">
+          <!-- Subheading -->
+          <h2 class="text-4xl mb-2">Who we are</h2>
+          <!-- Paragraph describing the company -->
+          <p>
+            At Country Rock Concrete, we're dedicated concrete professionals
+            passionate about building strong foundations, literally. We're a
+            small, local business with a big commitment to quality craftsmanship
+            and exceptional customer service.
+          </p>
+
+          <!-- Paragraph introducing services offered -->
+          <p class="mt-4">
+            We service the Elgin county community and
+            <a
+              class="link link-hover link-accent font-bold"
+              href="../pages/contact.html#areas-served"
+              >surrounding areas</a
+            >, specializing&nbsp;in:
+          </p>
+          <!-- List of services offered -->
+          <ul class="text-lg my-4 relative">
+            <li class="relative left-4">Concrete pads</li>
+            <li class="relative left-4">Driveways</li>
+            <li class="relative left-4">Walkways</li>
+            <li class="relative left-4">Patios</li>
+            <li class="relative left-4">Pool decks</li>
+            <li class="relative left-4">Foundations</li>
+            <li class="relative left-4">Concrete cutting</li>
+            <li class="relative left-4">Concrete sealing</li>
+            <li class="relative left-4">Maintenance</li>
+          </ul>
+
+          <!-- Subheading for the company's mission -->
+          <h2 class="text-4xl mt-4 mb-2">Our mission</h2>
+          <!-- Paragraph detailing the company's approach to projects -->
+          <p>
+            No matter the size or scope of your project, we take pride in
+            delivering a smooth, efficient experience from start to finish. Our
+            team of experienced workers is highly skilled and committed to using
+            the latest techniques and materials.
+          </p>
+          <!-- Additional paragraphs elaborating on the company's values and services -->
+          <p class="mt-4">
+            We're passionate about exceeding your expectations and ensuring your
+            concrete project is built to last. We believe in open communication
+            and collaboration, working closely with you throughout the entire
+            process to understand your vision and bring it to life.
+          </p>
+          <p class="mt-4">
+            If you're looking for a reliable, trustworthy concrete contractor,
+            contact Country Rock Concrete today. We're happy to discuss your
+            project and answer any questions you may have.
+          </p>
+        </div>
+      </div>
+      <!-- Second container div with a background color and padding -->
+      <div class="w-full bg-base-300 py-8">
+        <!-- Another centered heading -->
+        <div class="lg:max-w-7xl mx-auto">
+          <h2 id="our-work" class="clear text-5xl text-center my-8 lg:mt-16">
+            Our work
+          </h2>
+          <!-- Grid container for displaying items, with specific styling for larger screens -->
+          <div
+            id="grid"
+            class="clear-both grid md:grid-cols-[325px_325px] lg:grid-cols-[325px_325px_325px] mx-auto lg:gap-8 justify-center mb-12"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer section with social media icons and email link -->
+    <app-footer></app-footer>
+  </body>
+</html>
+<style>
+  /* Styles for the image card container */
+  .image-card-container {
+    width: 300px; /* Fixed width of the container */
+    margin: 1rem 0; /* Margin around the container */
+  }
+
+  /* Styles for individual image cards within the container */
+  .image-card {
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    position: relative; /* Allows positioning absolutely within this element */
+    display: flex; /* Uses Flexbox layout */
+    flex-direction: column; /* Arranges children vertically */
+    height: 300px; /* Fixed height of the card */
+    border-radius: var(
+      --rounded-box,
+      1rem
+    ); /* Rounded corners, defaulting to 1rem if variable not set */
+
+    /* Shadow effects using TailwindCSS variables */
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+      0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  /* Styles for text within the card */
+  .card-text {
+    font-size: 1.2rem; /* Text size */
+  }
+</style>
+<script>
+  // Array of image filenames
+  const images = [
+    "driveway-1.jpg",
+    "driveway-2.jpg",
+    "driveway-3.jpg",
+    "foundation-1.jpg",
+    "maintenance-1.jpg",
+    "pad-1.jpg",
+    "pad-2.jpg",
+    "pad-3.jpg",
+    "patio-1.jpg",
+    "patio-2.jpg",
+    "patio-3.jpg",
+    "patio-4.jpg",
+    "patio-5.jpg",
+    "pool-deck-1.jpg",
+    "pool-deck-2.jpg",
+    "sealing-1.jpg",
+    "walkway-1.jpg",
+    "walkway-2.jpg",
+    "walkway-3.jpg",
+    "cutting-1.jpg",
+    "pool-deck-3.jpg",
+  ];
+
+  // Get the grid container element
+  const imgGrid = document.getElementById("grid");
+
+  // Loop through each image filename
+  for (i = 0; i < images.length; i++) {
+    // Dynamically create HTML content for each image card and modal dialog
+    imgGrid.innerHTML += `    
+   <div class="image-card-container" onclick="my_modal_${i}.showModal()">
+      <img class="image-card" src=../../images/${images[i]}>
+   </div>
+   <dialog id="my_modal_${i}" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box !max-w-3xl">
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      <img class="p-6 " src=../../images/${images[i]}> 
+      </form>
+    </div>
+  </dialog>
+    `;
+  }
+</script>
