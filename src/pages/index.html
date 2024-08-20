@@ -439,4 +439,31 @@
     // Set an interval to automatically move the carousel items every 5 seconds
     setInterval(moveToNextItem, MILLIS);
   });
+  // Extract the fragment identifier (the part after '#') from the URL
+  const elementId = document.URL.split("#")[1];
+  // Interval in milliseconds
+  const MILLIS = 500;
+  // Function to navigate to a specific element on the page
+  function navigateToTarget() {
+    // Simulate an asynchronous operation, such as fetching data or waiting for a condition to be met
+    setTimeout(() => {
+      // Attempt to find the element by its ID
+      const element = document.getElementById(elementId);
+
+      // Check if the element exists
+      if (element) {
+        // Make the element visible if it was previously hidden
+        element.style.display = "block";
+
+        // Smoothly scroll the page so the element is in view
+        element.scrollIntoView({
+          behavior: "smooth", // Animation type
+          block: "start", // Alignment of the element in the viewport
+        });
+      }
+    }, MILLIS); // Wait 500 milliseconds before executing the code inside the setTimeout function
+  }
+
+  // Call the navigateToTarget function if an element ID was found in the URL
+  if (elementId) navigateToTarget();
 </script>
