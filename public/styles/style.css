@@ -191,7 +191,7 @@ button,
   /* Enhanced style for anchor tags within list items of menus and dropdowns on larger screens */
   .menu > li > a,
   .dropdown > li > div > a {
-    /* Increases the font size to 1.5rem, overriding any other conflicting styles */
-    font-size: 1.5rem !important;
+    /* Increases the font size to 1.33rem, overriding any other conflicting styles */
+    font-size: 1.33rem !important;
   }
 }

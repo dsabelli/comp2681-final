@@ -23,7 +23,10 @@
         shadowRoot.appendChild(template.content.cloneNode(true));
 
         // Slow down playrate of video
-        shadowRoot.getElementById("heroVideo").playbackRate = 0.75;
+        const heroVideo = shadowRoot.getElementById("heroVideo");
+        heroVideo.playbackRate = 0.75;
+        heroVideo.style.height = "90vh";
+        heroVideo.style.objectFit = "cover";
       }
     }
     // Define the custom element
